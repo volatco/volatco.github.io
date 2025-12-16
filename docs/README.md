@@ -1,3 +1,3 @@
 ## The Volatco Multicomputer Board
 
-Words.
+![logo](/images/Volatco-base.jpg)
