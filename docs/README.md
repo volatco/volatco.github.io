@@ -1,3 +1,3 @@
-## The Volatco Board
+## Get to know your Volatco board
 
 ![board](/images/KnowYourVolatco.jpg)
