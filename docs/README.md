@@ -1,3 +1,3 @@
-## The Volatco Multicomputer Board
+## The Volatco Board
 
 ![board](/images/KnowYourVolatco.jpg)
