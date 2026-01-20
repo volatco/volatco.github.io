@@ -2,7 +2,7 @@
 
 A novel energy-efficient, multiprogamming, dual 144-asynchronous computer.
 
-[volatco](/docs/volatco-approved-nobg.jpg)
+![volatco](/docs/volatco-approved-nobg.jpg)
 
 Words.
 

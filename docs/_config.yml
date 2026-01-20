@@ -1,4 +1,4 @@
-theme: jekyll-theme-minimal
+theme: jekyll-theme-midnight
 
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
@@ -11,12 +11,12 @@ timezone: Europe/Amsterdam
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Volatco # the main title
+title: The Volatco Multicomputer # the main title
 
-tagline: A dual 144-asynchronous multicomputer # it will display as the subtitle
+tagline: The future of multicomputing # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A development board for polyForth that helps to reveal machine intelligence.
+  A development board for polyForth that helps to reveal machine intelligence, using dual 144-aynchronous multicomputers.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -35,7 +35,7 @@ pageviews:
 #     light — Use the light color scheme
 #     dark — Use the dark color scheme
 #
-theme_mode: [dark]
+theme_mode:
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
