@@ -11,12 +11,12 @@ timezone: Europe/Amsterdam
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: The Only Multicomputer # the main title
+title: A Powerful Multicomputer # the main title
 
 tagline: The future of multicomputing # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  An affordable and advanced development board for polyForth that helps to reveal machine intelligence, using dual 144-asynchronous multicomputers.
+  An affordable and advanced development board for polyForth where the programmer can understand in great detail those algorithms as machine intelligence, using dual 144-asynchronous multicomputers.
 
 url: "https://volatco.github.io"
 pageviews:
