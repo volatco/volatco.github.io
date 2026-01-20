@@ -1,12 +1,12 @@
 ## Volatco
 
-Basic energy consumption stats:
- 
-  * 1.8V 10 ns sleep
-  * wake on 15nJ
-  * compute (non-clocked flop) 7pJ
+The most powerful environmentally-friendly multicomputer.
 
-An image of the board.
+![heard-01](./assets/jezek-heard.jpg)
+
+![heard-02](./assets/viver-heard.jpg)
+
+### An image of the board.
 
 ![volatco](./assets/volatco-approved-nobg.jpg)
 
@@ -51,10 +51,6 @@ The **Volatco prototype**, engineered by **Cartheur Research**, delivers exactly
 To **democratize high‑performance, energy‑efficient machine intelligence**. By bringing Volatco to the community, we'll create an ecosystem of **open‑source tools, asynchronous multicomputing, and collaborative research**-all built around a board anyone can afford and modify on an individual scale.
 
 ![know-your-volatco](./assets/know-your-volatco.jpg)
-
-![heard-01](./assets/jezek-heard.jpg)
-
-![heard-02](./assets/viver-heard.jpg)
 
 ### DB002
 
