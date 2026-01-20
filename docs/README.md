@@ -31,7 +31,7 @@ The **Volatco multicomputer** packs **two GA144A12 mesh‑processor chips**, **1
 | **Feature** | **Benefit** |
 | --- | --- |
 | **Dual GA144A12 Cores (144 × 2 = 288 cores)** | Run 288 concurrent threads -ideal for parallel algorithms, machine-intelligence, and evolutionary computing. |
-| **PolyFORTH® Runtime** | A lightweight, stack‑based language that lets you prototype, debug, and iterate on AI kernels in minutes-no heavyweight SDKs required. |
+| **polyForth® Runtime** | A lightweight, stack‑based language that lets you prototype, debug, and iterate on AI kernels in minutes-no heavyweight SDKs required. |
 | **16 MB SRAM + 16 MB SPI Flash** | Fast volatile memory for model parameters and large non‑volatile storage for firmware, datasets, and compiled Forth programs. |
 | **Zero On‑Board Regulation** | Power is supplied externally, eliminating regulator quiescent draw and shrinking the PCB. Choose the most efficient supply for your experiment. |
 | **Rich Off‑Board I/O** | All GPIO, analogue‑in/out, and power pins are exposed on a standard breadboard‑compatible header. Plug in sensors, actuators, or custom expansion boards without soldering. |
