@@ -11,15 +11,13 @@ timezone: Europe/Amsterdam
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: The Volatco Multicomputer # the main title
+title: The Only Multicomputer # the main title
 
 tagline: The future of multicomputing # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A development board for polyForth that helps to reveal machine intelligence, using dual 144-aynchronous multicomputers.
+  An affordable and advanced development board for polyForth that helps to reveal machine intelligence, using dual 144-asynchronous multicomputers.
 
-# Fill in the protocol & hostname for your site.
-# E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://volatco.github.io"
 pageviews:
   provider: # now only supports 'goatcounter'
@@ -35,7 +33,7 @@ pageviews:
 #     light — Use the light color scheme
 #     dark — Use the dark color scheme
 #
-theme_mode:
+theme_mode: dark
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
@@ -45,4 +43,4 @@ theme_mode:
 cdn: "https://volatco.tech"
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "/commons/avatar.jpg"
+avatar: "/images/volatco.jpg"
