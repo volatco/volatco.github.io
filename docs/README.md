@@ -46,12 +46,12 @@ The **Volatco multicomputer** packs **two GA144A12 mesh‑processor chips**, **1
 - **Educators & students** seeking a tangible, low‑cost system to teach parallel computing and low‑power design principles.
 - **Start‑ups & prototypers** needing a ready‑made, asynchronous AI engine that can be integrated into products without additional licensing fees.
 
-**Our Vision**
-
-To **democratize high‑performance, energy‑efficient machine intelligence**. By bringing Volatco to the community, we'll create an ecosystem of **open‑source tools, asynchronous multicomputing, and collaborative research**-all built around a board anyone can afford and modify on an individual scale.
-
-![know-your-volatco](./assets/know-your-volatco.jpg)
+Words.
 
 ### DB002
 
 Here you can find the [DB002](./DB002.md).
+
+### Using the Volatco
+
+![know-your-volatco](./assets/know-your-volatco.jpg)
