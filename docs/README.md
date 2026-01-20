@@ -12,7 +12,7 @@ The most powerful environmentally-friendly multicomputer.
 
 ### Introducing Volatco
 
-**Volatco - The Ultra‑Compact, Low‑Power AI Engine for Researchers, Makers, and Edge‑Computing Pioneers**
+The Ultra‑Compact, Low‑Power AI Engine for Researchers, Makers, and Edge‑Computing Pioneers
 
 **Why Volatco?**
 
