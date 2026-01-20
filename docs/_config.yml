@@ -5,7 +5,7 @@ timezone: Europe/Amsterdam
 title: A Powerful Multicomputer # the main title
 tagline: The future of multicomputing # it will display as the subtitle
 description: >- # used by seo meta and the atom feed
-  An advanced polyForth development board where programming machine intelligence and other autonomous applications leverages the extreme power and lo-power compute of 16M (1-bit precision) SPI and 128M Disk Storage with 144-asynchronous nodes configured in HOST and TARGET chips where much of their I/O are configured as header-pins.
+  An advanced polyForth development board where programming machine intelligence and other autonomous applications leverages the extreme power and lo-power compute of 16M (1-bit precision) SPI and 128M Disk Storage with 144-asynchronous nodes configured in HOST and TARGET chips where much of their I/O are connected as header-pins.
 url: "https://volatco.github.io"
 pageviews:
   provider: # now only supports 'goatcounter'
