@@ -56,8 +56,6 @@ To **democratize high‑performance, energy‑efficient machine intelligence**. 
 
 ![heard-02](./assets/viver-heard.jpg)
 
-### Setting-up a new system
+### DB002
 
-Words.
-
-
+Here you can find the [DB002](./DB002.md).
