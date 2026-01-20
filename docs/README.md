@@ -50,7 +50,11 @@ The **Volatco prototype**, engineered by **Cartheur Research**, delivers exactly
 
 To **democratize high‑performance, energy‑efficient machine intelligence**. By bringing Volatco to the community, we'll create an ecosystem of **open‑source tools, asynchronous multicomputing, and collaborative research**-all built around a board anyone can afford and modify on an individual scale.
 
+![know-your-volatco](./assets/know-your-volatco.jpg)
 
+![heard-01](./assets/jezek-heard.jpg)
+
+![heard-02](./assets/viver-heard.jpg)
 
 ### Setting-up a new system
 
