@@ -63,10 +63,15 @@ All connections are made on the top of the PCB. The model 'c' dialect has pins o
 *	`J7` is for polyFORTH terminal input - including watchdog signal, normally supplied from on the board. Both `J7` and `J8` carry both ground and `V1P8` for devices such as FTDI chips that can accept our supply to power their I/O pins.
 *	`J9` and `J10` are signals from chip 0 plus two pins from chip 1. `J11`, `J12`, and `J13` all carry signals from `chip 1`. Each of these 12-pin headers carries 9 signals and 3 grounds, for a total of 45 signals. See following table for the pinout description.
 
-| Power control |   | J1 |   |      |
-|---------------|---|----|---|------|
-| GND           | 1 |    | 2 | V1P8 |
-| GND           | 3 |    | 4 | V1P8 |
+##### Power control
+
+| External 1V8 input |   | J1 |   |      |
+|:------------------:|:-:|:--:|:-:|:----:|
+|         GND        | 1 |    | 2 | V1P8 |
+|         GND        | 3 |    | 4 | V1P8 |
+Note that the ground pins are those nearest the PCB edge.
+
+
 
 ### Getting familiar with Volatco
 
