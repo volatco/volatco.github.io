@@ -50,6 +50,8 @@ In the following pages, the details of the Volatco board will be described.
 
 All connections are made on the top of the PCB. The model 'c' dialect has pins out both the top and bottom of the board.
 
+![know-your-volatco](./assets/know-your-volatco.jpg)
+
 #### Option Jumpers
 
 *	`J6` is "No boot". Insert to prevent `chip 0` from booting SPI flash on reset.
@@ -95,6 +97,16 @@ Note that unlike `J2` the incoming supply is on the right side of this jumper bl
 
 Short these pins together to assert reset on `chip 0`. Works in whether or not watchdog is enabled.
 
+#### Operating modes
+
+| Watchdog enable | J5 |                 |
+|:---------------:|:--:|:---------------:|
+|                 |  1 | Manual/external |
+|                 |  2 |  Host chip RST  |
+|                 |  3 |  Watchdog chip  |
+
+The manual/external reset always goes to the reset input of the watchdog chip. This jumper selects which signal goes to `chip 0`: The manual/external reset signal, or the output of the watchdog. Normal field production mode, enabling watchdog, is shown as the default. The watchdog should be disabled by moving the jumper to pins 1 and 2, when not running the production code on the chips.
+
 #### No boot
 
 | J6 |                  |
@@ -122,6 +134,56 @@ This serial port supports an asynchronous serial terminal for polyFORTH running 
 
 This serial port is used to talk to nodes on one or both chips directly using the Interactive Development Environment via node `708` of `chip 0`. Its reset pin is effective in both operating modes. Once the SPI flash has been initialized with boot code, this port is not necessary to run polyFORTH.
 
-### Getting familiar with Volatco
+#### Signal access
 
-![know-your-volatco](./assets/know-your-volatco.jpg)
+| Chip 0 part 1 |    |    |    |        |
+|:-------------:|:--:|:--:|:--:|:------:|
+|               |    | J9 |    |        |
+|      GND      |  1 |    |  2 | 117.ai |
+|     117.a0    |  3 |    |  4 | 217.17 |
+|      GND      |  5 |    |  6 | 317.17 |
+|     617.ao    |  7 |    |  8 | 617.ai |
+|      GND      |  9 |    | 10 | 517.17 |
+|     417.17    | 11 |    | 12 | 717.ai |
+
+| Chip 0 part 2 and two pins for chip 1 |    |     |    |          |
+|:-------------------------------------:|:--:|:---:|:--:|:--------:|
+|                                       |    | J10 |    |          |
+|                  GND                  |  1 |     |  2 |  717.ao  |
+|                 715.17                |  3 |     |  4 |  713.ao  |
+|                  GND                  |  5 |     |  6 |  713.ai  |
+|                 709.ai                |  7 |     |  8 |  709.ao  |
+|                  GND                  |  9 |     | 10 |  600.17  |
+|                10100.17               | 11 |     | 12 | 10200.17 |
+
+| Chip 1 part 1 |    |     |    |          |
+|:-------------:|:--:|:---:|:--:|:--------:|
+|               |    | J11 |    |          |
+|      GND      |  1 |     |  2 | 10600.17 |
+|    10500.17   |  3 |     |  4 | 10008.17 |
+|      GND      |  5 |     |  6 |  10008.5 |
+|    10008.3    |  7 |     |  8 |  10008.1 |
+|      GND      |  9 |     | 10 | 10117.ai |
+|    10117.ao   | 11 |     | 12 | 10217.17 |
+
+| Chip 1 part 2 |    |     |    |          |
+|:-------------:|:--:|:---:|:--:|:--------:|
+|               |    | J12 |    |          |
+|      GND      |  1 |     |  2 | 10317.17 |
+|    10517.17   |  3 |     |  4 | 10417.17 |
+|      GND      |  5 |     |  6 | 10617.ai |
+|    10717.ai   |  7 |     |  8 | 10617.ao |
+|      GND      |  9 |     | 10 | 10717.ao |
+|    10113.ao   | 11 |     | 12 | 10715.17 |
+
+| Chip 1 part 3 |    |     |    |                         |
+|:-------------:|:--:|:---:|:--:|:-----------------------:|
+|               |    | J13 |    |                         |
+|      GND      |  1 |     |  2 |         10713.ai        |
+|    10709.ao   |  3 |     |  4 |         10709.ai        |
+|      GND      |  5 |     |  6 | 10708.17 - Boot receive |
+|    10705.1    |  7 |     |  8 |         10708.1         |
+|      GND      |  9 |     | 10 |         10705.3         |
+|    10705.5    | 11 |     | 12 |   10715.17 - Pulled-up  |
+
+Be aware that pin 9 `10708.17` is input to a boot node. If pin is being driven high by another device when `chip 1` is reset, node `10708` will delay for a long time during boot which may cause problems with watchdog. If being used as an output and driven high on reset, the RC time constant of load capacitance and weak pull down resistance may be long enough to delay booting. The same is true of `10705.17` if being used as an input and driven low by another device during reset.
