@@ -5,7 +5,7 @@ timezone: Europe/Amsterdam
 title: Volatco - Powerful Multicompute # the main title
 tagline: The future of multiprogramming # it will display as the subtitle
 description: >- # used by seo meta and the atom feed
-  Advanced multicomputing tech.
+  The most advanced technology in the world today.
 url: "https://volatco.github.io"
 pageviews:
   provider: # now only supports 'goatcounter'
