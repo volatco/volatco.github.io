@@ -10,11 +10,11 @@ The most powerful environmentally-friendly multicomputer.
 
 ### Introducing Volatco
 
-The first widely-aailable multicomputer and multiprogrammer for machine-intelligent ideal applications in a compact 6 cm x 4 cm x 1.5 cm form-factor.
+The first widely-available multicomputer and multiprogrammer for machine-intelligent ideal applications in a compact 6 cm x 4 cm x 1.5 cm form-factor.
 
 **What is a Volatco?**
 
-A machine-intelligent capable off-power board that provides compute to explore **embodied AI, neuromorphic experimentation, and ultra‑low‑energy inference**, we need hardware that is **massively parallel, energy‑frugal, and easily extensible** with certified plug-ins.
+A machine-intelligent capable off-power board that provides compute to explore **embodied AI, neuromorphic experimentation, and ultra‑low‑energy inference**, with robust hardware that is **massively parallel, energy‑frugal, and easily extensible** with certified plug-ins.
 
 The **Volatco multicomputer** packs **two GA144A12 mesh‑processor chips**, **16 MB of SRAM**, **16 MB of SPI flash**, and a flexible off‑board I/O architecture into a board **smaller than a credit card** that draws **only milliwatts of power when idle**.
 
@@ -34,6 +34,8 @@ The **Volatco multicomputer** packs **two GA144A12 mesh‑processor chips**, **1
 | **Watchdog & Reset Circuitry** | Automatic recovery from software hangs, essential for long‑running experiments. |
 | **Modular Expansion Row** | Connect external power modules, additional memory, Bluetooth, Ethernet, or bespoke I/O boards via header rows. |
 | **Compact Form Factor** | Designed to fit into tight enclosures, drone payload bays, or multi‑board racks for scalable clusters. |
+
+The information below pertains to the technical details of a Volatco.
 
 ### The Volatco pin-set
 
