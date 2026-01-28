@@ -63,7 +63,7 @@ All connections are made on the top of the PCB. The model 'c' dialect has pins o
 *	`J7` is for polyFORTH terminal input - including watchdog signal, normally supplied from on the board. Both `J7` and `J8` carry both ground and `V1P8` for devices such as FTDI chips that can accept our supply to power their I/O pins.
 *	`J9` and `J10` are signals from chip 0 plus two pins from chip 1. `J11`, `J12`, and `J13` all carry signals from `chip 1`. Each of these 12-pin headers carries 9 signals and 3 grounds, for a total of 45 signals. See following table for the pinout description.
 
-##### Power control
+#### Power control
 
 | External 1V8 input |   | J1 |   |      |
 |:------------------:|:-:|:--:|:-:|:----:|
@@ -86,7 +86,41 @@ Jumpers are shown for normal operation. Substitute a shunt resistor to measure v
 
 Note that unlike `J2` the incoming supply is on the right side of this jumper block. The polarity of the drop will be reversed accordingly.
 
+#### Manual reset
 
+| J4 |              |
+|:--:|:------------:|
+|  1 | Manual reset |
+|  2 |      GND     |
+
+Short these pins together to assert reset on `chip 0`. Works in whether or not watchdog is enabled.
+
+#### No boot
+
+| J6 |                  |
+|:--:|:----------------:|
+|  1 |    Host 705.17   |
+|  2 | 1k pullup to 1v8 |
+
+Install this jumper to prevent program booting from the SPI flash. When this is installed, the watchdog must be disabled by connecting pins 1 and 2 of `J5`.
+
+#### Programmer access
+
+| polyForth serial terminal |   | J7 |   |                   |
+|:-------------------------:|:-:|:--:|:-:|:-----------------:|
+|            GND            | 1 |    | 2 |        V1P8       |
+|      Output from chip     | 3 |    | 4 |   Input to chip   |
+|            GND            | 5 |    | 5 | Input to watchdog |
+
+This serial port supports an asynchronous serial terminal for polyFORTH running on `chip 0`. Pin 6 must be jumpered or wire wrapped to a pin generating watchdog pulses before the watchdog may be enabled.
+
+|     IDE serial    |   | J8 |   |               |
+|:-----------------:|:-:|:--:|:-:|:-------------:|
+|        GND        | 1 |    | 2 |      V1P8     |
+|  Output from chip | 3 |    | 4 | Input to chip |
+|        GND        | 5 |    | 5 |     RESET     |
+
+This serial port is used to talk to nodes on one or both chips directly using the Interactive Development Environment via node `708` of `chip 0`. Its reset pin is effective in both operating modes. Once the SPI flash has been initialized with boot code, this port is not necessary to run polyFORTH.
 
 ### Getting familiar with Volatco
 
