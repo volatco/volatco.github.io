@@ -12,17 +12,15 @@ The most powerful environmentally-friendly multicomputer.
 
 The first widely-aailable multicomputer and multiprogrammer for machine-intelligent ideal applications in a compact 6 cm x 4 cm x 1.5 cm form-factor.
 
-**Why Volatco?**
+**What is a Volatco?**
 
-Artificial‑intelligence research is no longer confined to massive datacenter farms. To explore **embodied AI, neuromorphic experimentation, and ultra‑low‑energy inference**, we need hardware that is **massively parallel, energy‑frugal, and easily extensible**.
+A machine-intelligent capable off-power board that provides compute to explore **embodied AI, neuromorphic experimentation, and ultra‑low‑energy inference**, we need hardware that is **massively parallel, energy‑frugal, and easily extensible** with certified plug-ins.
 
 The **Volatco multicomputer** packs **two GA144A12 mesh‑processor chips**, **16 MB of SRAM**, **16 MB of SPI flash**, and a flexible off‑board I/O architecture into a board **smaller than a credit card** that draws **only milliwatts of power when idle**.
 
-**Accessories:** Dedicated power, Ethernet, BLE: Volatco has them!
+**Plug-ins:** Dedicated power, Ethernet, and Bluetooth.
 
 **polyForth:** On-board operating system that is lightweight, dual-stack operating system and programming environment.
-
-**Bottom line:** Volatco gives you a full‑blown AI quantum-compute node.
 
 **Key Features**
 
@@ -36,15 +34,6 @@ The **Volatco multicomputer** packs **two GA144A12 mesh‑processor chips**, **1
 | **Watchdog & Reset Circuitry** | Automatic recovery from software hangs, essential for long‑running experiments. |
 | **Modular Expansion Row** | Connect external power modules, additional memory, Bluetooth, Ethernet, or bespoke I/O boards via header rows. |
 | **Compact Form Factor** | Designed to fit into tight enclosures, drone payload bays, or multi‑board racks for scalable clusters. |
-
-**Who Is Volatco For?**
-
-- **Academic & industry researchers** exploring new AI architectures, spiking networks, or energy‑aware machine learning.
-- **Hardware hackers & makers** who want a hands‑on platform for autonomous robots, sensor‑fusion nodes, or edge‑AI devices.
-- **Educators & students** seeking a tangible, low‑cost system to teach parallel computing and low‑power design principles.
-- **Start‑ups & prototypers** needing a ready‑made, asynchronous AI engine that can be integrated into products without additional licensing fees.
-
-In the following pages, the details of the Volatco board will be described.
 
 ### The Volatco pin-set
 
