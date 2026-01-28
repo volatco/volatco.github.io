@@ -4,15 +4,15 @@ The most powerful environmentally-friendly multicomputer.
 
 ![heard-01](./assets/jezek-heard.jpg)
 
-![heard-02](./assets/viver-heard.jpg)
-
-### An image of the board.
+### The Volatco board.
 
 ![volatco](./assets/volatco-approved-nobg.jpg)
 
+![heard-02](./assets/viver-heard.jpg)
+
 ### Introducing Volatco
 
-The Ultra‑Compact, Low‑Power AI Engine for Researchers, Makers, and Edge‑Computing Pioneers
+The first widely-aailable multicomputer and multiprogrammer for machine-intelligent ideal applications in a compact 6 cm x 4 cm x 1.5 cm form-factor.
 
 **Why Volatco?**
 
@@ -46,11 +46,11 @@ The **Volatco multicomputer** packs **two GA144A12 mesh‑processor chips**, **1
 - **Educators & students** seeking a tangible, low‑cost system to teach parallel computing and low‑power design principles.
 - **Start‑ups & prototypers** needing a ready‑made, asynchronous AI engine that can be integrated into products without additional licensing fees.
 
-Words.
+In the following pages, the details of the Volatco board will be described.
 
-### DB002
+### The Volatco pin-set
 
-Here you can find the [DB002](./DB002.md).
+
 
 ### Using the Volatco
 
