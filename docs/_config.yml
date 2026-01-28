@@ -2,8 +2,8 @@ theme: jekyll-theme-midnight
 lang: en
 timezone: Europe/Amsterdam
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-title: A Powerful Multicomputer # the main title
-tagline: The future of multicomputing # it will display as the subtitle
+title: Volatco - Powerful Multicompute # the main title
+tagline: The future of multiprogramming # it will display as the subtitle
 description: >- # used by seo meta and the atom feed
   Advanced multicomputing tech.
 url: "https://volatco.github.io"
