@@ -69,18 +69,21 @@ All connections are made on the top of the PCB. The model 'c' dialect has pins o
 |:------------------:|:-:|:--:|:-:|:----:|
 |         GND        | 1 |    | 2 | V1P8 |
 |         GND        | 3 |    | 4 | V1P8 |
+
 Note that the ground pins are those nearest the PCB edge.
 
 | Chip 0 (Host) shunts |   | J2 |   |          |
 |:--------------------:|:-:|:--:|:-:|:--------:|
 |         V1P8         | 1 |    | 2 | VC0-Core |
 |         V1P8         | 3 |    | 4 |  VC0-I/O |
+
 Jumpers are shown for normal operation. Substitute a shunt resistor to measure voltage drop across the resistor and calculate current. Be sure to use a small enough value that the expected current will not cause a voltage drop setting the supply below specs for the chip (typically 1.62V).
 
 | Chip 1 (Target) shunts |   | J3 |   |      |
 |:----------------------:|:-:|:--:|:-:|:----:|
 |        VC1-Core        | 1 |    | 2 | V1P8 |
 |         VC1-I/O        | 3 |    | 4 | V1P8 |
+
 Note that unlike `J2` the incoming supply is on the right side of this jumper block. The polarity of the drop will be reversed accordingly.
 
 
