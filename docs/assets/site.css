@@ -8,11 +8,15 @@
   --toc-muted: #9aa4bf;
 }
 
+.inner {
+  max-width: 1200px;
+  width: 92%;
+}
+
 .page {
   display: grid;
   grid-template-columns: minmax(200px, var(--toc-width)) 1fr;
   gap: var(--toc-gap);
-  max-width: 1200px;
   margin: 0 auto;
   padding: 28px 20px 60px;
 }
