@@ -9,8 +9,10 @@
 }
 
 .inner {
-  max-width: 1200px;
-  width: 92%;
+  max-width: none;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .page {
