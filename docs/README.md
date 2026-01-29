@@ -1,4 +1,4 @@
-The most powerful environmentally-friendly computing hardware that can run independently of grid power and data. An advanced polyForth development board where programming machine intelligence and other autonomous applications leverages the extreme power and lo-power compute of 16MB (1-bit precision) SPI and 128MB SRAM with 144-asynchronous nodes configured in HOST and TARGET chips where much of their I/O are connected as header-pins.
+The most powerful environmentally-friendly computing hardware that can run independently of grid power and data. An advanced polyForth development board where programming machine intelligence and other autonomous applications leverages the extreme low-power (1.8 VDC) compute of 16MB (1-bit precision) SPI and 128MB SRAM with 144-asynchronous nodes configured in HOST and TARGET chips where much of their I/O are connected as header-pins.
 
 ![heard-01](./assets/jezek-heard.jpg)
 
