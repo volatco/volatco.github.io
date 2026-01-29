@@ -137,6 +137,19 @@
   color: #d5d9e5;
 }
 
+#header_wrap .inner {
+  text-align: center;
+}
+
+#project_title {
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+#project_tagline {
+  color: var(--toc-link);
+}
+
 @media (max-width: 900px) {
   .page {
     grid-template-columns: 1fr;
