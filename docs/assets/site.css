@@ -9,8 +9,8 @@
 }
 
 .inner {
-  max-width: none;
-  width: 100%;
+  max-width: none !important;
+  width: 100% !important;
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -18,13 +18,14 @@
 #header_wrap .inner,
 #main_content_wrap .inner,
 #main_content {
-  max-width: none;
-  width: 100%;
+  max-width: none !important;
+  width: 100% !important;
 }
 
 #main_content_wrap,
 .outer {
-  width: 100%;
+  width: 100% !important;
+  max-width: none !important;
 }
 
 .page {
