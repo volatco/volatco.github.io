@@ -9,14 +9,36 @@
   </head>
   <body>
     <div class="page">
-      <aside class="toc" aria-label="Table of contents">
-        <div class="toc__title">Contents</div>
-        <nav id="toc"></nav>
+      <aside class="toc" aria-label="Pages">
+        <div class="toc__title">Pages</div>
+        <nav>
+          <ul class="toc__list">
+            {% assign page_items = site.pages | where_exp: "p", "p.dir == '/pages/'" | sort: "title" %}
+            {% for p in page_items %}
+              <li class="toc__item{% if p.url == page.url %} toc__item--active{% endif %}">
+                <a href="{{ p.url | relative_url }}">{{ p.title | default: p.name }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
       </aside>
       <main class="content">
+        <header class="masthead">
+          {% if site.title %}
+            <div class="masthead__title">{{ site.title }}</div>
+          {% endif %}
+          {% if site.tagline %}
+            <div class="masthead__tagline">{{ site.tagline }}</div>
+          {% endif %}
+          {% if site.description %}
+            <div class="masthead__desc">{{ site.description }}</div>
+          {% endif %}
+        </header>
+        {% if page.title %}
+          <h1 class="page-title">{{ page.title }}</h1>
+        {% endif %}
         {{ content }}
       </main>
     </div>
-    <script src="{{ '/assets/toc.js' | relative_url }}" defer></script>
   </body>
 </html>
