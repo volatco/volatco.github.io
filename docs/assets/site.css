@@ -49,13 +49,8 @@
 }
 
 .toc-spacer {
-  position: sticky;
-  top: 24px;
   align-self: start;
-  min-height: 160px;
-  border: 1px solid var(--toc-border);
-  background: var(--toc-bg);
-  border-radius: 10px;
+  min-height: 1px;
 }
 
 .toc__title {
