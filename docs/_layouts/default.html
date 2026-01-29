@@ -8,37 +8,44 @@
     <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
   </head>
   <body>
-    <div class="page">
-      <aside class="toc" aria-label="Pages">
-        <div class="toc__title">Pages</div>
-        <nav>
-          <ul class="toc__list">
-            {% assign page_items = site.pages | where_exp: "p", "p.dir == '/pages/'" | sort: "title" %}
-            {% for p in page_items %}
-              <li class="toc__item{% if p.url == page.url %} toc__item--active{% endif %}">
-                <a href="{{ p.url | relative_url }}">{{ p.title | default: p.name }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </nav>
-      </aside>
-      <main class="content">
-        <header class="masthead">
-          {% if site.title %}
-            <div class="masthead__title">{{ site.title }}</div>
-          {% endif %}
-          {% if site.tagline %}
-            <div class="masthead__tagline">{{ site.tagline }}</div>
-          {% endif %}
-          {% if site.description %}
-            <div class="masthead__desc">{{ site.description }}</div>
-          {% endif %}
-        </header>
-        {% if page.title %}
-          <h1 class="page-title">{{ page.title }}</h1>
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        {% if site.title %}
+          <h1 id="project_title">{{ site.title }}</h1>
         {% endif %}
-        {{ content }}
-      </main>
+        {% if site.tagline %}
+          <h2 id="project_tagline">{{ site.tagline }}</h2>
+        {% endif %}
+        {% if site.description %}
+          <p id="project_description">{{ site.description }}</p>
+        {% endif %}
+      </header>
+    </div>
+
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="page">
+          <aside class="toc" aria-label="Pages">
+            <div class="toc__title">Pages</div>
+            <nav>
+              <ul class="toc__list">
+                {% assign page_items = site.pages | where_exp: "p", "p.dir == '/pages/'" | sort: "title" %}
+                {% for p in page_items %}
+                  <li class="toc__item{% if p.url == page.url %} toc__item--active{% endif %}">
+                    <a href="{{ p.url | relative_url }}">{{ p.title | default: p.name }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </nav>
+          </aside>
+          <main class="content">
+            {% if page.title %}
+              <h1 class="page-title">{{ page.title }}</h1>
+            {% endif %}
+            {{ content }}
+          </main>
+        </div>
+      </section>
     </div>
   </body>
 </html>
