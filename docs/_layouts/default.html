@@ -26,6 +26,9 @@
       <section id="main_content" class="inner">
         <div class="page">
           <aside class="toc" aria-label="Pages">
+            <div class="toc__nav">
+              <a class="toc__home" href="{{ '/' | relative_url }}">← Back to main</a>
+            </div>
             <div class="toc__title">Pages</div>
             <nav>
               <ul class="toc__list">
@@ -44,6 +47,7 @@
             {% endif %}
             {{ content }}
           </main>
+          <aside class="toc-spacer" aria-hidden="true"></aside>
         </div>
       </section>
     </div>

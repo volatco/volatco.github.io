@@ -30,7 +30,7 @@
 
 .page {
   display: grid;
-  grid-template-columns: minmax(200px, var(--toc-width)) 1fr;
+  grid-template-columns: minmax(200px, var(--toc-width)) minmax(0, 1fr) minmax(200px, var(--toc-width));
   gap: var(--toc-gap);
   margin: 0 auto;
   padding: 28px 20px 60px;
@@ -48,12 +48,32 @@
   padding: 16px 14px 18px;
 }
 
+.toc-spacer {
+  align-self: start;
+}
+
 .toc__title {
   font-size: 0.95rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--toc-muted);
   margin-bottom: 12px;
+}
+
+.toc__nav {
+  margin-bottom: 10px;
+}
+
+.toc__home {
+  color: var(--toc-link);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.toc__home:hover,
+.toc__home:focus {
+  color: var(--toc-link-hover);
+  text-decoration: underline;
 }
 
 .toc__list {
@@ -118,5 +138,9 @@
     position: static;
     max-height: none;
     order: 2;
+  }
+
+  .toc-spacer {
+    display: none;
   }
 }
