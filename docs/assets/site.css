@@ -138,16 +138,18 @@
 }
 
 #header_wrap .inner {
-  text-align: center;
+  text-align: center !important;
 }
 
 #project_title {
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  text-align: center !important;
 }
 
 #project_tagline {
   color: var(--toc-link);
+  text-align: center !important;
 }
 
 @media (max-width: 900px) {
