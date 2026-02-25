@@ -2,6 +2,9 @@ theme: jekyll-theme-midnight
 permalink: pretty
 lang: en
 timezone: Europe/Amsterdam
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 defaults:
   - scope:
       path: "pages"
@@ -15,6 +18,12 @@ tagline: The future of multiprogramming # it will display as the subtitle
 description: >- # used by seo meta and the atom feed
   The most advanced computer in the world today.
 url: "https://volatco.github.io"
+logo: "/assets/volatco-approved-nobg.jpg"
+social:
+  name: Volatco
+  links:
+    - https://volatco.tech/
+    - https://cartheur.com/pages/volatco
 pageviews:
   provider: # now only supports 'goatcounter'
 theme_mode: dark

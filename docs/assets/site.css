@@ -79,11 +79,6 @@ body {
   padding: 16px 14px 18px;
 }
 
-.toc-spacer {
-  align-self: start;
-  min-height: 1px;
-}
-
 .toc__title {
   font-size: 0.95rem;
   letter-spacing: 0.04em;
@@ -299,10 +294,6 @@ body {
     position: static;
     max-height: none;
     order: 2;
-  }
-
-  .toc-spacer {
-    display: none;
   }
 
   .content {

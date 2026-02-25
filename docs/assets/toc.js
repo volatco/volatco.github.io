@@ -21,7 +21,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     var content = document.querySelector('.content');
     var tocRoot = document.getElementById('toc');
-    var tocWrapper = document.querySelector('.toc');
+    var tocWrapper = tocRoot ? tocRoot.closest('.toc') : null;
 
     if (!content || !tocRoot || !tocWrapper) {
       return;
