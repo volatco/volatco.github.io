@@ -1,4 +1,5 @@
 theme: jekyll-theme-midnight
+permalink: pretty
 lang: en
 timezone: Europe/Amsterdam
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
