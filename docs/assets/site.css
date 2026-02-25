@@ -325,6 +325,12 @@ body {
     -webkit-overflow-scrolling: touch;
     white-space: normal;
     font-size: 0.9rem;
+    width: fit-content;
+    max-width: 100%;
+    min-width: 0;
+    table-layout: auto;
+    border: 0;
+    border-radius: 0;
   }
 
   .content th,
