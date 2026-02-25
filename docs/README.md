@@ -116,10 +116,10 @@ Note that unlike `J2` the incoming supply is on the right side of this jumper bl
 
 **J4 - Manual reset**
 
-|    |              |
-|:--:|:------------:|
-|  1 | Manual reset |
-|  2 |      GND     |
+| Pin | Signal |
+|:---:|:------:|
+|  1  | Manual reset |
+|  2  | GND |
 
 Short these pins together to assert reset on `chip 0`. Works in whether or not watchdog is enabled.
 
@@ -127,11 +127,11 @@ Short these pins together to assert reset on `chip 0`. Works in whether or not w
 
 **J5 - Watchdog mode select**
 
-|                 |   |                 |
-|:---------------:|:--:|:---------------:|
-|                 |  1 | Manual/external |
-|                 |  2 |  Host chip RST  |
-|                 |  3 |  Watchdog chip  |
+| Pin | Signal |
+|:---:|:-------|
+|  1  | Manual/external |
+|  2  | Host chip RST |
+|  3  | Watchdog chip |
 
 The manual/external reset always goes to the reset input of the watchdog chip. This jumper selects which signal goes to `chip 0`: The manual/external reset signal, or the output of the watchdog. Normal field production mode, enabling watchdog, is shown as the default. The watchdog should be disabled by moving the jumper to pins 1 and 2, when not running the production code on the chips.
 
@@ -139,10 +139,10 @@ The manual/external reset always goes to the reset input of the watchdog chip. T
 
 **J6 - No boot**
 
-|    |                  |
-|:--:|:----------------:|
-|  1 |    Host 705.17   |
-|  2 | 1k pullup to 1v8 |
+| Pin | Signal |
+|:---:|:-------|
+|  1  | Host 705.17 |
+|  2  | 1k pullup to 1v8 |
 
 Install this jumper to prevent program booting from the SPI flash. When this is installed, the watchdog must be disabled by connecting pins 1 and 2 of `J5`.
 
