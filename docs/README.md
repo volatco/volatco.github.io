@@ -1,10 +1,25 @@
 Volatco is a low-power asynchronous computing development board for embedded control, robotics, and experimental machine-intelligence workloads. This page documents the hardware layout, power and jumper behavior, and board-level signal access.
 
-![heard-01](./assets/jezek-heard.jpg)
-
 ![volatco](./assets/volatco-approved-nobg.jpg)
 
-![heard-02](./assets/viver-heard.jpg)
+### Volatco Forest Creature Adventures
+
+The forest creatures are used as scenario guides for learning board behavior, power discipline, and asynchronous control patterns.
+
+| Adventure | Objective | Hardware focus | Expected outcome |
+| --- | --- | --- | --- |
+| Jezek and the Quiet Trail | Build a low-duty-cycle sensing loop that only wakes compute on events. | Wake/sleep transitions, watchdog-safe loops | Stable event logging with low idle draw. |
+| Viver and the Signal Bridge | Forward sensor data between two nodes with bounded latency. | Inter-node messaging, pin routing | Repeatable packet transfer with measured timing. |
+| Owl at J8 | Configure a robust serial debug session and reset workflow. | `J8` IDE serial, manual reset via `J4` | Reliable flash/load/debug cycle during development. |
+| Fox in the Rain | Validate graceful behavior under noisy or intermittent inputs. | Input filtering, timeout handling | No lockups during bursty/noisy signal tests. |
+| Hedgehog Night Watch | Run long-duration watchdog validation with periodic health beacons. | `J5` mode selection, watchdog pulse source on `J7` | Automatic recovery from forced hangs. |
+| Badger Power Audit | Profile power across idle, active, and burst workloads. | Shunt measurement on `J2`/`J3`, workload scheduling | Baseline power table for reproducible experiments. |
+
+Suggested format for each adventure:
+1. Define the signal path and pin map.
+2. Define pass/fail criteria with measurable thresholds.
+3. Record power, latency, and recovery behavior.
+4. Save minimal reproducible polyForth program and test notes.
 
 ### Overview
 
@@ -40,16 +55,6 @@ The platform includes **two GA144A12 mesh-processor chips**, **16 MB SRAM**, **1
 - Per-instruction energy: ~7 pJ.
 
 The design supports deterministic low-latency behavior, with cores able to transition between active and inactive states in one gate delay.
-
-### Related research
-
-**Agentic AI: Embodied Learning Model**
-
-The ideal research path frames agency through embodied interaction rather than passive observation. In this view, an agent runs experiments, receives results, and updates behavior from those interactions.
-
-The foundational module describes a cycle of anticipation, result comparison, and intrinsic states (for example frustrated, self-satisfied, and bored) that drive experiment switching and developmental learning over time.
-
-Source pathway and branches: [github.com/cartheur/ideal](https://github.com/cartheur/ideal)
 
 **Key Features**
 
@@ -207,3 +212,21 @@ This serial port is used to talk to nodes on one or both chips directly using th
 |    10705.5    | 11 |     | 12 |   10715.17 - Pulled-up  |
 
 Be aware that pin 9 `10708.17` is input to a boot node. If pin is being driven high by another device when `chip 1` is reset, node `10708` will delay for a long time during boot which may cause problems with watchdog. If being used as an output and driven high on reset, the RC time constant of load capacitance and weak pull down resistance may be long enough to delay booting. The same is true of `10705.17` if being used as an input and driven low by another device during reset.
+
+### Adventure gaming
+
+Adventure artwork for the Volatco forest-creature scenarios:
+
+![heard-01](./assets/jezek-heard.jpg)
+
+![heard-02](./assets/viver-heard.jpg)
+
+### Related research
+
+**Agentic AI: Embodied Learning Model**
+
+The ideal research path frames agency through embodied interaction rather than passive observation. In this view, an agent runs experiments, receives results, and updates behavior from those interactions.
+
+The foundational module describes a cycle of anticipation, result comparison, and intrinsic states (for example frustrated, self-satisfied, and bored) that drive experiment switching and developmental learning over time.
+
+Source pathway and branches: [github.com/cartheur/ideal](https://github.com/cartheur/ideal)
