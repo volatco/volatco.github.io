@@ -336,7 +336,8 @@ body {
   .content th,
   .content td {
     padding: 0.42rem 0.5rem;
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+    word-break: normal;
   }
 
   .content td code,
