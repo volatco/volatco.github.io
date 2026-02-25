@@ -1,4 +1,4 @@
-The most powerful environmentally-friendly computing hardware that can run independently of grid power and data. An advanced polyForth development board where programming machine intelligence and other autonomous applications leverages the extreme low-power (1.8 VDC) compute of 16MB (1-bit precision) SPI and 128MB SRAM with 144-asynchronous nodes configured in HOST and TARGET chips where much of their I/O are connected as header-pins.
+Volatco is a low-power asynchronous computing development board for embedded control, robotics, and experimental machine-intelligence workloads. This page documents the hardware layout, power and jumper behavior, and board-level signal access.
 
 ![heard-01](./assets/jezek-heard.jpg)
 
@@ -6,25 +6,56 @@ The most powerful environmentally-friendly computing hardware that can run indep
 
 ![heard-02](./assets/viver-heard.jpg)
 
-### Introducing Volatco
+### Overview
 
-The first widely-available multicomputer and multiprogrammer for machine-intelligent ideal applications in a compact 6 cm x 4 cm x 1.5 cm form-factor.
+Volatco is a compact multicomputer and multiprogrammer platform (6 cm x 4 cm x 1.5 cm) built around ISLP GA144-class asynchronous processing.
 
-**What is a Volatco?**
+**System description**
 
-A machine-intelligent capable off-power board that provides compute to explore **embodied AI, neuromorphic experimentation, and ultra‑low‑energy inference**, with robust hardware that is **massively parallel, energy‑frugal, and easily extensible** with certified plug-ins.
+A board intended for **embodied AI, neuromorphic experimentation, and ultra-low-energy inference** workloads, with a massively parallel architecture and off-board expansion support.
 
-The **Volatco multicomputer** packs **two GA144A12 mesh‑processor chips**, **16 MB of SRAM**, **16 MB of SPI flash**, and a flexible off‑board I/O architecture into a board **smaller than a credit card** that draws **only milliwatts of power when idle**.
+The platform includes **two GA144A12 mesh-processor chips**, **16 MB SRAM**, **16 MB SPI flash**, and exposed I/O via header pins.
 
-**Plug-ins:** Dedicated power, Ethernet, and Bluetooth.
+**Supported plug-in modules:** dedicated power, Ethernet, and Bluetooth.
 
-**polyForth:** On-board operating system that is lightweight, dual-stack operating system and programming environment.
+**polyForth:** on-board lightweight dual-stack operating system and programming environment.
+
+### System summary
+
+- 144 independent F18A cores.
+- Up to 96B ops/s.
+- ~13 uW idle to ~972 mW peak (~650 mW typical upper draw).
+- One-gate start/stop latency (~100 ps).
+- ~7 pJ per instruction.
+- Event-driven compute: power used only when active.
+
+### Technical snapshot
+
+- Architecture: ISLP GA144-based.
+- Cores: 144 x 18-bit F18A processing nodes.
+- Peak compute: up to 96 billion ops/s.
+- Power per F18A: 90 nW idle leakage to 6.8 mW active.
+- Power range per chip: 13 uW to 972 mW.
+- Start and stop: one-gate delay (100 ps).
+- Per-instruction energy: ~7 pJ.
+
+The design supports deterministic low-latency behavior, with cores able to transition between active and inactive states in one gate delay.
+
+### Related research
+
+**Agentic AI: Embodied Learning Model**
+
+The ideal research path frames agency through embodied interaction rather than passive observation. In this view, an agent runs experiments, receives results, and updates behavior from those interactions.
+
+The foundational module describes a cycle of anticipation, result comparison, and intrinsic states (for example frustrated, self-satisfied, and bored) that drive experiment switching and developmental learning over time.
+
+Source pathway and branches: [github.com/cartheur/ideal](https://github.com/cartheur/ideal)
 
 **Key Features**
 
 | **Feature** | **Benefit** |
 | --- | --- |
-| **Dual GA144A12 Cores (144 × 2 = 288 cores)** | Run 288 concurrent threads -ideal for parallel algorithms, machine-intelligence, and evolutionary computing. |
+| **ISLP with dual GA144 (144 × 2 = 288 cores)** | Run 288 concurrent threads -ideal for parallel algorithms, machine-intelligence, and evolutionary computing. |
 | **polyForth® Runtime** | A lightweight, stack‑based language that lets you prototype, debug, and iterate on AI kernels in minutes-no heavyweight SDKs required. |
 | **16 MB SRAM + 16 MB SPI Flash** | Fast volatile memory for model parameters and large non‑volatile storage for firmware, datasets, and compiled Forth programs. |
 | **Zero On‑Board Regulation** | Power is supplied externally, eliminating regulator quiescent draw and shrinking the PCB. Choose the most efficient supply for your experiment. |
@@ -37,7 +68,7 @@ The information below pertains to the technical details of a Volatco.
 
 ### The Volatco pin-set
 
-All connections are made on the top of the PCB. The model 'c' dialect has pins out both the top and bottom of the board.
+All connections are made on the top of the PCB for Volatco model 'a'. The model 'b' dialect has pins out both the top and bottom of the board.
 
 ![know-your-volatco](./assets/know-your-volatco.jpg)
 
