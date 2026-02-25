@@ -298,7 +298,7 @@ body {
   .toc {
     position: static;
     max-height: none;
-    order: 1;
+    order: 2;
   }
 
   .toc-spacer {
