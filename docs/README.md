@@ -24,7 +24,7 @@ A board intended for **embodied AI, neuromorphic experimentation, and ultra-low-
 
 The platform includes **two GA144A12 mesh-processor chips**, **16 MB SRAM**, **16 MB SPI flash**, and exposed I/O via header pins.
 
-**Supported plug-in modules:** dedicated power, Ethernet, and Bluetooth.
+**Supported plug-in modules:** Power and USB-connectivity, Ethernet, BLE, and external system interface.
 
 **polyForth:** on-board lightweight dual-stack operating system and programming environment.
 
