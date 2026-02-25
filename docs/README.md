@@ -89,6 +89,7 @@ All connections are made on the top of the PCB for Volatco model 'a'. The model 
 
 |                      |   |    |   |      |
 |:--------------------:|:-:|:--:|:-:|:----:|
+|                      |   | J1 |   |      |
 |         GND          | 1 |    | 2 | V1P8 |
 |         GND          | 3 |    | 4 | V1P8 |
 
@@ -98,6 +99,7 @@ Note that the ground pins are those nearest the PCB edge.
 
 |                      |   |    |   |          |
 |:--------------------:|:-:|:--:|:-:|:--------:|
+|                      |   | J2 |   |          |
 |         V1P8         | 1 |    | 2 | VC0-Core |
 |         V1P8         | 3 |    | 4 |  VC0-I/O |
 
@@ -107,6 +109,7 @@ Jumpers are shown for normal operation. Substitute a shunt resistor to measure v
 
 |                        |   |    |   |      |
 |:----------------------:|:-:|:--:|:-:|:----:|
+|                        |   | J3 |   |      |
 |        VC1-Core        | 1 |    | 2 | V1P8 |
 |         VC1-I/O        | 3 |    | 4 | V1P8 |
 
@@ -152,6 +155,7 @@ Install this jumper to prevent program booting from the SPI flash. When this is 
 
 |                           |   |    |   |                   |
 |:-------------------------:|:-:|:--:|:-:|:-----------------:|
+|                           |   | J7 |   |                   |
 |            GND            | 1 |    | 2 |        V1P8       |
 |      Output from chip     | 3 |    | 4 |   Input to chip   |
 |            GND            | 5 |    | 6 | Input to watchdog |
@@ -162,6 +166,7 @@ This serial port supports an asynchronous serial terminal for polyFORTH running 
 
 |                     |   |    |   |               |
 |:-------------------:|:-:|:--:|:-:|:-------------:|
+|                     |   | J8 |   |               |
 |         GND         | 1 |    | 2 |      V1P8     |
 |   Output from chip  | 3 |    | 4 | Input to chip |
 |         GND         | 5 |    | 6 |     RESET     |
@@ -174,6 +179,7 @@ This serial port is used to talk to nodes on one or both chips directly using th
 
 |               |    |    |    |        |
 |:-------------:|:--:|:--:|:--:|:------:|
+|               |    | J9 |    |        |
 |      GND      |  1 |    |  2 | 117.ai |
 |     117.a0    |  3 |    |  4 | 217.17 |
 |      GND      |  5 |    |  6 | 317.17 |
@@ -185,6 +191,7 @@ This serial port is used to talk to nodes on one or both chips directly using th
 
 |                                       |    |     |    |          |
 |:-------------------------------------:|:--:|:---:|:--:|:--------:|
+|                                       |    | J10 |    |          |
 |                  GND                  |  1 |     |  2 |  717.ao  |
 |                 715.17                |  3 |     |  4 |  713.ao  |
 |                  GND                  |  5 |     |  6 |  713.ai  |
@@ -196,6 +203,7 @@ This serial port is used to talk to nodes on one or both chips directly using th
 
 |               |    |     |    |          |
 |:-------------:|:--:|:---:|:--:|:--------:|
+|               |    | J11 |    |          |
 |      GND      |  1 |     |  2 | 10600.17 |
 |    10500.17   |  3 |     |  4 | 10008.17 |
 |      GND      |  5 |     |  6 |  10008.5 |
@@ -207,6 +215,7 @@ This serial port is used to talk to nodes on one or both chips directly using th
 
 |               |    |     |    |          |
 |:-------------:|:--:|:---:|:--:|:--------:|
+|               |    | J12 |    |          |
 |      GND      |  1 |     |  2 | 10317.17 |
 |    10517.17   |  3 |     |  4 | 10417.17 |
 |      GND      |  5 |     |  6 | 10617.ai |
@@ -218,6 +227,7 @@ This serial port is used to talk to nodes on one or both chips directly using th
 
 |               |    |     |    |                         |
 |:-------------:|:--:|:---:|:--:|:-----------------------:|
+|               |    | J13 |    |                         |
 |      GND      |  1 |     |  2 |         10713.ai        |
 |    10709.ao   |  3 |     |  4 |         10709.ai        |
 |      GND      |  5 |     |  6 | 10708.17 - Boot receive |
