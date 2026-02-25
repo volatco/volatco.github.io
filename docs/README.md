@@ -208,9 +208,20 @@ Be aware that pin 9 `10708.17` is input to a boot node. If pin is being driven h
 
 ### Volatco Forest Creature Adventures
 
-![heard-01](./assets/jezek-heard.jpg)
-
-![heard-02](./assets/viver-heard.jpg)
+<div class="artwork-panel" role="group" aria-label="Volatco adventure artwork">
+  <figure class="artwork-panel__item">
+    <img src="./assets/jezek-heard.jpg" alt="Jezek forest creature artwork">
+    <figcaption>Jezek</figcaption>
+  </figure>
+  <figure class="artwork-panel__item artwork-panel__item--center">
+    <img src="./assets/volatco-approved-nobg.jpg" alt="Volatco board artwork">
+    <figcaption>Volatco</figcaption>
+  </figure>
+  <figure class="artwork-panel__item">
+    <img src="./assets/viver-heard.jpg" alt="Viver forest creature artwork">
+    <figcaption>Viver</figcaption>
+  </figure>
+</div>
 
 The forest creatures are used as scenario guides for learning board behavior, power discipline, and asynchronous control patterns.
 

@@ -175,6 +175,39 @@
   white-space: nowrap;
 }
 
+.artwork-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 1rem 0 1.2rem;
+}
+
+.artwork-panel__item {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid var(--table-border);
+  border-radius: 10px;
+  background: #101824;
+  text-align: center;
+}
+
+.artwork-panel__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.artwork-panel__item figcaption {
+  margin-top: 0.45rem;
+  color: var(--toc-muted);
+  font-size: 0.9rem;
+}
+
+.artwork-panel__item--center {
+  background: #111d2d;
+}
+
 #project_description {
   margin-top: 6px;
   color: #d5d9e5;
@@ -216,5 +249,9 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
+  }
+
+  .artwork-panel {
+    grid-template-columns: 1fr;
   }
 }
