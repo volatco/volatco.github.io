@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Volatco Technical Overview
+title: Volatco Documentation
 ---
 
 {% include readme-content.md %}
