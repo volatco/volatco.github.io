@@ -136,6 +136,11 @@
   text-align: justify;
 }
 
+.home-page .content > p:first-of-type {
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
 /* Improve readability of markdown tables in the Midnight theme. */
 .content table {
   width: 100%;
