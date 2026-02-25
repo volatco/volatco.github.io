@@ -35,7 +35,7 @@
             <div class="toc__title">Pages</div>
             <nav>
               <ul class="toc__list">
-                {% assign page_items = site.pages | where_exp: "p", "p.dir == '/pages/'" | sort: "title" %}
+                {% assign page_items = site.pages | where_exp: "p", "p.path contains 'pages/'" | sort: "title" %}
                 {% for p in page_items %}
                   <li class="toc__item{% if p.url == page.url %} toc__item--active{% endif %}">
                     <a href="{{ p.url | relative_url }}">{{ p.title | default: p.name }}</a>
