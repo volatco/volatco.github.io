@@ -251,19 +251,39 @@
 }
 
 @media (max-width: 900px) {
+  .inner {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
   .page {
     grid-template-columns: 1fr;
     gap: 18px;
+    padding: 16px 0 36px;
   }
 
   .toc {
     position: static;
     max-height: none;
-    order: 2;
+    order: 1;
   }
 
   .toc-spacer {
     display: none;
+  }
+
+  .content {
+    text-align: left;
+  }
+
+  .page-title {
+    font-size: 1.35rem;
+    margin: 12px 0 10px;
+    line-height: 1.2;
+  }
+
+  .section-indicator {
+    font-size: 1rem;
   }
 
   .content table {
@@ -271,6 +291,23 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
+    font-size: 0.9rem;
+  }
+
+  .content th,
+  .content td {
+    padding: 0.42rem 0.5rem;
+  }
+
+  .content td code,
+  .content th code {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .content img {
+    max-width: 100%;
+    height: auto;
   }
 
   .artwork-panel {
