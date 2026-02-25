@@ -12,6 +12,12 @@
   --table-row-hover: #1a2333;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   width: 100%;
@@ -19,6 +25,7 @@ body {
 }
 
 body {
+  overflow-x: clip;
   overflow-x: hidden;
 }
 
@@ -154,6 +161,7 @@ body {
 
 .content {
   text-align: justify;
+  overflow-wrap: anywhere;
 }
 
 .home-page .content > p:first-of-type {
