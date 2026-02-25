@@ -12,6 +12,26 @@
   --table-row-hover: #1a2333;
 }
 
+html,
+body {
+  width: 100%;
+  min-width: 0 !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.outer,
+.inner,
+#header_wrap,
+#main_content_wrap,
+#main_content,
+.page,
+.content {
+  min-width: 0 !important;
+}
+
 .inner {
   max-width: none !important;
   width: 100% !important;
@@ -197,6 +217,11 @@
   white-space: nowrap;
 }
 
+.content pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 .artwork-panel {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -290,13 +315,14 @@
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
+    white-space: normal;
     font-size: 0.9rem;
   }
 
   .content th,
   .content td {
     padding: 0.42rem 0.5rem;
+    overflow-wrap: anywhere;
   }
 
   .content td code,
