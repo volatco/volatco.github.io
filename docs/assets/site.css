@@ -6,6 +6,10 @@
   --toc-link: #cdd7ff;
   --toc-link-hover: #ffffff;
   --toc-muted: #9aa4bf;
+  --table-border: #3a4357;
+  --table-header-bg: #131a27;
+  --table-row-alt: #0f1622;
+  --table-row-hover: #1a2333;
 }
 
 .inner {
@@ -132,6 +136,45 @@
   text-align: justify;
 }
 
+/* Improve readability of markdown tables in the Midnight theme. */
+.content table {
+  width: 100%;
+  margin: 1.2rem 0 1.5rem;
+  border-collapse: collapse;
+  border: 1px solid var(--table-border);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.96rem;
+}
+
+.content th,
+.content td {
+  border: 1px solid var(--table-border);
+  padding: 0.5rem 0.7rem;
+  vertical-align: top;
+  text-align: left;
+  line-height: 1.35;
+}
+
+.content th {
+  background: var(--table-header-bg);
+  color: #f2f5ff;
+  font-weight: 700;
+}
+
+.content tr:nth-child(even) td {
+  background: var(--table-row-alt);
+}
+
+.content tr:hover td {
+  background: var(--table-row-hover);
+}
+
+.content td code,
+.content th code {
+  white-space: nowrap;
+}
+
 #project_description {
   margin-top: 6px;
   color: #d5d9e5;
@@ -166,5 +209,12 @@
 
   .toc-spacer {
     display: none;
+  }
+
+  .content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
   }
 }
