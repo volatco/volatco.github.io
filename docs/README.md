@@ -170,7 +170,7 @@ This serial port is used to talk to nodes on one or both chips directly using th
 
 <h4 class="section-indicator">Signal access</h4>
 
-**J9 - Chip 0 part 1**
+**J9 - Chip 0 (part 1)**
 
 |               |    | J9 |    |        |
 |:-------------:|:--:|:--:|:--:|:------:|
@@ -181,7 +181,7 @@ This serial port is used to talk to nodes on one or both chips directly using th
 |      GND      |  9 |    | 10 | 517.17 |
 |     417.17    | 11 |    | 12 | 717.ai |
 
-**J10 - Chip 0 part 2 and two pins for chip 1**
+**J10 - Chip 0 (part 2) and two pins for chip 1**
 
 |                                       |    | J10 |    |          |
 |:-------------------------------------:|:--:|:---:|:--:|:--------:|
@@ -192,7 +192,7 @@ This serial port is used to talk to nodes on one or both chips directly using th
 |                  GND                  |  9 |     | 10 |  600.17  |
 |                10100.17               | 11 |     | 12 | 10200.17 |
 
-**J11 - Chip 1 part 1**
+**J11 - Chip 1 (part 1)**
 
 |               |    | J11 |    |          |
 |:-------------:|:--:|:---:|:--:|:--------:|
@@ -203,7 +203,7 @@ This serial port is used to talk to nodes on one or both chips directly using th
 |      GND      |  9 |     | 10 | 10117.ai |
 |    10117.ao   | 11 |     | 12 | 10217.17 |
 
-**J12 - Chip 1 part 2**
+**J12 - Chip 1 (part 2)**
 
 |               |    | J12 |    |          |
 |:-------------:|:--:|:---:|:--:|:--------:|
@@ -214,7 +214,7 @@ This serial port is used to talk to nodes on one or both chips directly using th
 |      GND      |  9 |     | 10 | 10717.ao |
 |    10113.ao   | 11 |     | 12 | 10715.17 |
 
-**J13 - Chip 1 part 3**
+**J13 - Chip 1 (part 3)**
 
 |               |    | J13 |    |                         |
 |:-------------:|:--:|:---:|:--:|:-----------------------:|
