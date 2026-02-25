@@ -255,3 +255,35 @@
     grid-template-columns: 1fr;
   }
 }
+
+.section-crumb {
+  display: none;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0.6rem 0 1rem;
+  font-size: 0.92rem;
+}
+
+.section-crumb--visible {
+  display: inline-flex;
+}
+
+.section-crumb__back {
+  border: 1px solid var(--toc-border);
+  background: #111b2a;
+  color: var(--toc-link);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.section-crumb__back:hover,
+.section-crumb__back:focus {
+  color: var(--toc-link-hover);
+  border-color: #42506f;
+}
+
+.section-crumb__target {
+  color: var(--toc-muted);
+}
