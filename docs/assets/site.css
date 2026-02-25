@@ -306,7 +306,10 @@ body {
   }
 
   .content {
-    text-align: left;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
   }
 
   .page-title {
