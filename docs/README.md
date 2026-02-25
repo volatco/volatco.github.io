@@ -1,25 +1,18 @@
-Volatco is a low-power asynchronous computing development board for embedded control, robotics, and experimental machine-intelligence workloads. This page documents the hardware layout, power and jumper behavior, and board-level signal access.
+Volatco is a low-power asynchronous computing development board for embedded control, robotics, and experimental machine-intelligence workloads, and this page provides a complete technical overview of the platform architecture, performance and power characteristics, expansion and programming interfaces, detailed jumper and pin references, and the adventure game context used for scenario-based exploration.
 
 ![volatco](./assets/volatco-approved-nobg.jpg)
 
-### Volatco Forest Creature Adventures
+### What You Can Program with a Volatco
 
-The forest creatures are used as scenario guides for learning board behavior, power discipline, and asynchronous control patterns.
+By working through this documentation, you can implement and validate:
 
-| Adventure | Objective | Hardware focus | Expected outcome |
-| --- | --- | --- | --- |
-| Jezek and the Quiet Trail | Build a low-duty-cycle sensing loop that only wakes compute on events. | Wake/sleep transitions, watchdog-safe loops | Stable event logging with low idle draw. |
-| Viver and the Signal Bridge | Forward sensor data between two nodes with bounded latency. | Inter-node messaging, pin routing | Repeatable packet transfer with measured timing. |
-| Owl at J8 | Configure a robust serial debug session and reset workflow. | `J8` IDE serial, manual reset via `J4` | Reliable flash/load/debug cycle during development. |
-| Fox in the Rain | Validate graceful behavior under noisy or intermittent inputs. | Input filtering, timeout handling | No lockups during bursty/noisy signal tests. |
-| Hedgehog Night Watch | Run long-duration watchdog validation with periodic health beacons. | `J5` mode selection, watchdog pulse source on `J7` | Automatic recovery from forced hangs. |
-| Badger Power Audit | Profile power across idle, active, and burst workloads. | Shunt measurement on `J2`/`J3`, workload scheduling | Baseline power table for reproducible experiments. |
-
-Suggested format for each adventure:
-1. Define the signal path and pin map.
-2. Define pass/fail criteria with measurable thresholds.
-3. Record power, latency, and recovery behavior.
-4. Save minimal reproducible polyForth program and test notes.
+- Event-driven sensing loops that wake compute only on signal activity.
+- Multi-node message pipelines across exposed chip I/O headers.
+- Deterministic control tasks with bounded-latency response behavior.
+- Serial development and deployment workflows through `J8` and reset control on `J4`.
+- Watchdog-protected runtime behavior using `J5`/`J7` for long-running applications.
+- Power-aware scheduling experiments by measuring and tuning behavior through `J2`/`J3`.
+- Reproducible polyForth test programs tied to explicit pin maps and pass/fail criteria.
 
 ### Overview
 
@@ -213,13 +206,28 @@ This serial port is used to talk to nodes on one or both chips directly using th
 
 Be aware that pin 9 `10708.17` is input to a boot node. If pin is being driven high by another device when `chip 1` is reset, node `10708` will delay for a long time during boot which may cause problems with watchdog. If being used as an output and driven high on reset, the RC time constant of load capacitance and weak pull down resistance may be long enough to delay booting. The same is true of `10705.17` if being used as an input and driven low by another device during reset.
 
-### Adventure gaming
-
-Adventure artwork for the Volatco forest-creature scenarios:
+### Volatco Forest Creature Adventures
 
 ![heard-01](./assets/jezek-heard.jpg)
 
 ![heard-02](./assets/viver-heard.jpg)
+
+The forest creatures are used as scenario guides for learning board behavior, power discipline, and asynchronous control patterns.
+
+| Adventure | Objective | Hardware focus | Expected outcome |
+| --- | --- | --- | --- |
+| Jezek and the Quiet Trail | Build a low-duty-cycle sensing loop that only wakes compute on events. | Wake/sleep transitions, watchdog-safe loops | Stable event logging with low idle draw. |
+| Viver and the Signal Bridge | Forward sensor data between two nodes with bounded latency. | Inter-node messaging, pin routing | Repeatable packet transfer with measured timing. |
+| Owl at J8 | Configure a robust serial debug session and reset workflow. | `J8` IDE serial, manual reset via `J4` | Reliable flash/load/debug cycle during development. |
+| Fox in the Rain | Validate graceful behavior under noisy or intermittent inputs. | Input filtering, timeout handling | No lockups during bursty/noisy signal tests. |
+| Hedgehog Night Watch | Run long-duration watchdog validation with periodic health beacons. | `J5` mode selection, watchdog pulse source on `J7` | Automatic recovery from forced hangs. |
+| Badger Power Audit | Profile power across idle, active, and burst workloads. | Shunt measurement on `J2`/`J3`, workload scheduling | Baseline power table for reproducible experiments. |
+
+Suggested format for each adventure:
+1. Define the signal path and pin map.
+2. Define pass/fail criteria with measurable thresholds.
+3. Record power, latency, and recovery behavior.
+4. Save minimal reproducible polyForth program and test notes.
 
 ### Related research
 
