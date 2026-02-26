@@ -227,7 +227,7 @@ This serial port is used to talk to nodes on one or both chips directly using th
 
 Be aware that pin 9 `10708.17` is input to a boot node. If pin is being driven high by another device when `chip 1` is reset, node `10708` will delay for a long time during boot which may cause problems with watchdog. If being used as an output and driven high on reset, the RC time constant of load capacitance and weak pull down resistance may be long enough to delay booting. The same is true of `10705.17` if being used as an input and driven low by another device during reset.
 
-### Volatco Forest Creature Adventures
+### Forest Creature Adventures
 
 <div class="artwork-panel" role="group" aria-label="Volatco adventure artwork">
   <figure class="artwork-panel__item">
