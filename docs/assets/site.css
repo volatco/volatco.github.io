@@ -381,3 +381,98 @@ body {
 .section-crumb__target {
   color: var(--toc-muted);
 }
+
+.adventure-table td:last-child {
+  text-align: center;
+}
+
+.adventure-artwork-trigger {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.adventure-artwork-thumb {
+  display: block;
+  width: min(140px, 100%);
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.adventure-artwork-trigger:focus-visible {
+  outline: 2px solid #8bc3ff;
+  outline-offset: 2px;
+  border-radius: 7px;
+}
+
+.artwork-lightbox-open {
+  overflow: hidden;
+}
+
+.artwork-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.artwork-lightbox[hidden] {
+  display: none;
+}
+
+.artwork-lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 8, 14, 0.82);
+}
+
+.artwork-lightbox__figure {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  max-width: min(95vw, 1100px);
+  max-height: 92vh;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.artwork-lightbox__image {
+  max-width: 100%;
+  max-height: calc(92vh - 54px);
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+}
+
+.artwork-lightbox__caption {
+  color: #ecf2ff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.artwork-lightbox__close {
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(15, 21, 33, 0.92);
+  color: #fff;
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.artwork-lightbox__close:focus-visible {
+  outline: 2px solid #8bc3ff;
+  outline-offset: 2px;
+}
