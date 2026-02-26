@@ -2,7 +2,7 @@ Volatco is a low-power asynchronous computing development board for embedded con
 
 ![volatco](./assets/volatco-approved-nobg.jpg)
 
-### What You Can Program with a Volatco
+### Programming with Volatco
 
 By working through this documentation, you can implement and validate:
 
