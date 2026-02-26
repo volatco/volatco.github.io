@@ -232,6 +232,13 @@ body {
   margin: 1rem 0 1.2rem;
 }
 
+.adventure-steps-visual {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0.9rem 0 1.3rem;
+}
+
 .artwork-panel__item {
   margin: 0;
   padding: 10px;
@@ -356,6 +363,10 @@ body {
 
   .artwork-panel__item--intro {
     width: 100%;
+  }
+
+  .adventure-steps-visual {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

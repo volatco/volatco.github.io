@@ -266,6 +266,25 @@ Suggested format for each adventure:
 3. Record power, latency, and recovery behavior.
 4. Save minimal reproducible polyForth program and test notes.
 
+<div class="adventure-steps-visual" role="group" aria-label="Adventure workflow visual steps">
+  <figure class="artwork-panel__item">
+    <img src="./assets/jezek-heard.jpg" alt="Step 1 visual: signal path and pin mapping">
+    <figcaption>Step 1: Signal path and pin map</figcaption>
+  </figure>
+  <figure class="artwork-panel__item">
+    <img src="./assets/viver-heard.jpg" alt="Step 2 visual: measurable pass and fail criteria">
+    <figcaption>Step 2: Pass/fail criteria</figcaption>
+  </figure>
+  <figure class="artwork-panel__item">
+    <img src="./assets/owl-at-J8.jpg" alt="Step 3 visual: power latency and recovery recording">
+    <figcaption>Step 3: Power, latency, recovery</figcaption>
+  </figure>
+  <figure class="artwork-panel__item">
+    <img src="./assets/badger-power-audit.jpg" alt="Step 4 visual: save minimal reproducible polyForth notes">
+    <figcaption>Step 4: Save program and notes</figcaption>
+  </figure>
+</div>
+
 ### Related research
 
 **Agentic AI: Embodied Learning Model**
