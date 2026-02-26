@@ -246,7 +246,7 @@ Be aware that pin 9 `10708.17` is input to a boot node. If pin is being driven h
 
 The forest creatures are used as scenario guides for learning board behavior, power discipline, and asynchronous control patterns.
 
-<figure class="artwork-panel__item artwork-panel__item--center">
+<figure class="artwork-panel__item artwork-panel__item--center artwork-panel__item--intro">
   <img src="./assets/programming-volatco-fun.jpg" alt="Programming with Volatco can be playful and hands-on">
   <figcaption>Programming with Volatco is hands-on: Test ideas, explore signals, and turn experiments into adventures.</figcaption>
 </figure>

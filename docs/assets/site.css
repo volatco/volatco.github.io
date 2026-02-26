@@ -258,6 +258,11 @@ body {
   background: #111d2d;
 }
 
+.artwork-panel__item--intro {
+  width: min(50%, 720px);
+  margin: 0 auto 1rem;
+}
+
 #project_description {
   margin-top: 6px;
   color: #d5d9e5;
@@ -347,6 +352,10 @@ body {
 
   .artwork-panel {
     grid-template-columns: 1fr;
+  }
+
+  .artwork-panel__item--intro {
+    width: 100%;
   }
 }
 
