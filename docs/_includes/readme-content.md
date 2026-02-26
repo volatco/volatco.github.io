@@ -239,21 +239,21 @@ Be aware that pin 9 `10708.17` is input to a boot node. If pin is being driven h
     <figcaption>Volatco</figcaption>
   </figure>
   <figure class="artwork-panel__item">
-    <img src="./assets/viver-heard.jpg" alt="Viver forest creature artwork">
+    <img src="./assets/future-computing.jpg" alt="Viver forest creature artwork">
     <figcaption>Viver</figcaption>
   </figure>
 </div>
 
 The forest creatures are used as scenario guides for learning board behavior, power discipline, and asynchronous control patterns.
 
-| Adventure | Objective | Hardware focus | Expected outcome |
-| --- | --- | --- | --- |
-| Jezek and the Quiet Trail | Build a low-duty-cycle sensing loop that only wakes compute on events. | Wake/sleep transitions, watchdog-safe loops | Stable event logging with low idle draw. |
-| Viver and the Signal Bridge | Forward sensor data between two nodes with bounded latency. | Inter-node messaging, pin routing | Repeatable packet transfer with measured timing. |
-| Owl at J8 | Configure a robust serial debug session and reset workflow. | `J8` IDE serial, manual reset via `J4` | Reliable flash/load/debug cycle during development. |
-| Fox in the Rain | Validate graceful behavior under noisy or intermittent inputs. | Input filtering, timeout handling | No lockups during bursty/noisy signal tests. |
-| Hedgehog Night Watch | Run long-duration watchdog validation with periodic health beacons. | `J5` mode selection, watchdog pulse source on `J7` | Automatic recovery from forced hangs. |
-| Badger Power Audit | Profile power across idle, active, and burst workloads. | Shunt measurement on `J2`/`J3`, workload scheduling | Baseline power table for reproducible experiments. |
+| Adventure | Objective | Hardware focus | Expected outcome | Artwork |
+| --- | --- | --- | --- | --- |
+| Jezek and the Quiet Trail | Build a low-duty-cycle sensing loop that only wakes compute on events. | Wake/sleep transitions, watchdog-safe loops | Stable event logging with low idle draw. | - |
+| Viver and the Signal Bridge | Forward sensor data between two nodes with bounded latency. | Inter-node messaging, pin routing | Repeatable packet transfer with measured timing. | - |
+| Owl at J8 | Configure a robust serial debug session and reset workflow. | `J8` IDE serial, manual reset via `J4` | Reliable flash/load/debug cycle during development. | ![Owl at J8 artwork](./assets/owl-at-J8.jpg) |
+| Fox in the Rain | Validate graceful behavior under noisy or intermittent inputs. | Input filtering, timeout handling | No lockups during bursty/noisy signal tests. | - |
+| Hedgehog Night Watch | Run long-duration watchdog validation with periodic health beacons. | `J5` mode selection, watchdog pulse source on `J7` | Automatic recovery from forced hangs. | - |
+| Badger Power Audit | Profile power across idle, active, and burst workloads. | Shunt measurement on `J2`/`J3`, workload scheduling | Baseline power table for reproducible experiments. | ![Badger Power Audit artwork](./assets/badger-power-audit.jpg) |
 
 Suggested format for each adventure:
 1. Define the signal path and pin map.
