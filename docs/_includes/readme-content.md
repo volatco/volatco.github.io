@@ -1,6 +1,6 @@
 Volatco is a low-power asynchronous computing development board for embedded control, robotics, and experimental machine-intelligence workloads, and this page provides a complete technical overview of the platform architecture, performance and power characteristics, expansion and programming interfaces, detailed jumper and pin references, and the adventure game context used for scenario-based exploration.
 
-![volatco](./assets/volatco-approved-nobg.jpg)
+![i-just-heard-about-volatco](./assets/banner.png)
 
 ### Programming with Volatco
 
