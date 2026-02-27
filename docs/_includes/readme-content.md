@@ -235,7 +235,7 @@ Be aware that pin 9 `10708.17` is input to a boot node. If pin is being driven h
     <figcaption>Jezek</figcaption>
   </figure>
   <figure class="artwork-panel__item artwork-panel__item--center">
-    <img src="./assets/wolny-clever.jpg" alt="A change to make it clever">
+    <img src="./assets/wolny-sustainable.jpg" alt="Forest friendly">
     <figcaption>Wolny</figcaption>
   </figure>
   <figure class="artwork-panel__item">
