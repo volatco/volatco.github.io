@@ -242,10 +242,12 @@ body {
   text-align: center;
 }
 
-.artwork-panel__item img {
+.artwork-panel > .artwork-panel__item img {
   display: block;
   width: 100%;
+  aspect-ratio: 4 / 3;
   height: auto;
+  object-fit: cover;
   border-radius: 8px;
 }
 
