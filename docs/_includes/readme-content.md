@@ -53,7 +53,7 @@ The design supports deterministic low-latency behavior, with cores able to trans
 
 | **Feature** | **Benefit** |
 | --- | --- |
-| **ISLP with dual GA144 (144 × 2 = 288 cores)** | Run 288 concurrent threads -ideal for parallel algorithms, machine-intelligence, and evolutionary computing. |
+| **ISLP with dual GA144 (144 × 2 = 288 cores)** | Run 288 concurrent threads that are ideal for parallel algorithms, machine-intelligence, and evolutionary computing. |
 | **polyForth® Runtime** | A lightweight, stack‑based language that lets you prototype, debug, and iterate on AI kernels in minutes-no heavyweight SDKs required. |
 | **16 MB SRAM + 16 MB SPI Flash** | Fast volatile memory for model parameters and large non‑volatile storage for firmware, datasets, and compiled Forth programs. |
 | **Zero On‑Board Regulation** | Power is supplied externally, eliminating regulator quiescent draw and shrinking the PCB. Choose the most efficient supply for your experiment. |
