@@ -231,15 +231,15 @@ Be aware that pin 9 `10708.17` is input to a boot node. If pin is being driven h
 
 <div class="artwork-panel" role="group" aria-label="Volatco adventure artwork">
   <figure class="artwork-panel__item">
-    <img src="./assets/jezek-heard.jpg" alt="Jezek forest creature artwork">
+    <img src="./assets/jezek-144-vms.jpg" alt="Jezek forest creature artwork">
     <figcaption>Jezek</figcaption>
   </figure>
   <figure class="artwork-panel__item artwork-panel__item--center">
-    <img src="./assets/volatco-approved-nobg.jpg" alt="Volatco board artwork">
-    <figcaption>Volatco</figcaption>
+    <img src="./assets/wolny-clever.jpg" alt="Volatco board artwork">
+    <figcaption>Wolny</figcaption>
   </figure>
   <figure class="artwork-panel__item">
-    <img src="./assets/future-computing.jpg" alt="Viver forest creature artwork">
+    <img src="./assets/viver-solve-any-problem.jpg" alt="Viver forest creature artwork">
     <figcaption>Viver</figcaption>
   </figure>
 </div>
