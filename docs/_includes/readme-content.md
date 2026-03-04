@@ -253,11 +253,11 @@ The forest creatures are used as scenario guides for learning board behavior, po
 
 | Adventure | Objective | Hardware focus | Expected outcome | Artwork |
 | --- | --- | --- | --- | --- |
-| Jezek and the Quiet Trail | Build a low-duty-cycle sensing loop that only wakes compute on events. | Wake/sleep transitions, watchdog-safe loops | Stable event logging with low idle draw. | - |
-| Viver and the Signal Bridge | Forward sensor data between two nodes with bounded latency. | Inter-node messaging, pin routing | Repeatable packet transfer with measured timing. | - |
+| Jezek and the Quiet Trail | Build a low-duty-cycle sensing loop that only wakes compute on events. | Wake/sleep transitions, watchdog-safe loops | Stable event logging with low idle draw. | ![Jezek and the Quiet Trail artwork](./assets/jezek-quiet-trail.jpg) |
+| Viver and the Signal Bridge | Forward sensor data between two nodes with bounded latency. | Inter-node messaging, pin routing | Repeatable packet transfer with measured timing. | ![Viver and the Signal Bridge artwork](./assets/viver-signal-bridge.jpg) |
 | Owl at J8 | Configure a robust serial debug session and reset workflow. | `J8` IDE serial, manual reset via `J4` | Reliable flash/load/debug cycle during development. | ![Owl at J8 artwork](./assets/owl-at-J8.jpg) |
-| Fox in the Rain | Validate graceful behavior under noisy or intermittent inputs. | Input filtering, timeout handling | No lockups during bursty/noisy signal tests. | - |
-| Hedgehog Night Watch | Run long-duration watchdog validation with periodic health beacons. | `J5` mode selection, watchdog pulse source on `J7` | Automatic recovery from forced hangs. | - |
+| Fox in the Rain | Validate graceful behavior under noisy or intermittent inputs. | Input filtering, timeout handling | No lockups during bursty/noisy signal tests. | ![Fox in the Rain artwork](./assets/fox-in-the-rain.jpg) |
+| Hedgehog Night Watch | Run long-duration watchdog validation with periodic health beacons. | `J5` mode selection, watchdog pulse source on `J7` | Automatic recovery from forced hangs. | ![Hedgehog Night Watch artwork](./assets/hedgehog-night-watch.jpg) |
 | Badger Power Audit | Profile power across idle, active, and burst workloads. | Shunt measurement on `J2`/`J3`, workload scheduling | Baseline power table for reproducible experiments. | ![Badger Power Audit artwork](./assets/badger-power-audit.jpg) |
 
 Suggested format for each adventure:
