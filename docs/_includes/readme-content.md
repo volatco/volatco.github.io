@@ -91,7 +91,7 @@ All connections are made on the top of the PCB for Volatco model 'a'. The model 
 
 ![know-your-volatco](../assets/j1.png)
 
-Note that the ground pins are those nearest the PCB edge.
+Note that the ground pins are those nearest the PCB edge. Also, pin 4 will depend on what is provided from the stacked module boards above or below.
 
 ![know-your-volatco](../assets/j2.png)
 
@@ -123,7 +123,7 @@ Install this jumper to prevent program booting from the SPI flash. When this is 
 
 ![know-your-volatco](../assets/j7.png)
 
-This serial port supports an asynchronous serial terminal for polyFORTH running on `chip 0`. Pin 6 must be jumpered or wire wrapped to a pin generating watchdog pulses before the watchdog may be enabled.
+This serial port supports an asynchronous serial terminal for polyFORTH running on `chip 0`. Pin 6 must be jumpered or connected to a pin generating watchdog pulses before the watchdog may be enabled.
 
 ![know-your-volatco](../assets/j8.png)
 
@@ -141,7 +141,7 @@ This serial port is used to talk to nodes on one or both chips directly using th
 
 ![know-your-volatco](../assets/j13.png)
 
-Be aware that pin 6 `10708.17` is input to a boot node. If pin is being driven high by another device when `chip 1` is reset, node `10708` will delay for a long time during boot which may cause problems with watchdog. If being used as an output and driven high on reset, the RC time constant of load capacitance and weak pull down resistance may be long enough to delay booting. The same is true of `10705.17` if being used as an input and driven low by another device during reset.
+Be aware that pin 6 `10708.17` is input to a boot node. If pin is being driven high by another device when `chip 1` is reset, node `10708` will delay for a long time during boot which may cause problems with watchdog. If being used as an output and driven high on reset, the RC time constant of load capacitance and weak pull down resistance may be long enough to delay booting. The same is true of `10705.17` if being used as an input and driven low by another device during reset. Note that `10705.17` is pulled up with 5.1kΩ. If this pin is not being used it should be set to high impedance to minimize power consumption.
 
 ### Forest Creature Adventures
 
