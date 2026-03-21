@@ -83,9 +83,13 @@ All connections are made on the top of the PCB for Volatco model 'a'. The model 
 *	`J7` is for polyFORTH terminal input - including watchdog signal, normally supplied from on the board. Both `J7` and `J8` carry both ground and `V1P8` for devices such as FTDI chips that can accept our supply to power their I/O pins.
 *	`J9` and `J10` are signals from chip 0 plus two pins from chip 1. `J11`, `J12`, and `J13` all carry signals from `chip 1`. Each of these 12-pin headers carries 9 signals and 3 grounds, for a total of 45 signals. See following table for the pinout description.
 
+---
+
 <h4 class="section-indicator">Components</h4>
 
 ![know-your-volatco](../assets/main-components.png)
+
+---
 
 <h4 class="section-indicator">Power control</h4>
 
@@ -93,13 +97,19 @@ All connections are made on the top of the PCB for Volatco model 'a'. The model 
 
 Note that the ground pins are those nearest the PCB edge. Also, pin 4 will depend on what is provided from the stacked module boards above or below.
 
+---
+
 ![know-your-volatco](../assets/j2.png)
 
 Jumpers are shown for normal operation. Substitute a shunt resistor to measure voltage drop across the resistor and calculate current. Be sure to use a small enough value that the expected current will not cause a voltage drop setting the supply below specs for the chip (typically 1.62V).
 
+---
+
 ![know-your-volatco](../assets/j3.png)
 
 Note that unlike `J2` the incoming supply is on the right side of this jumper block. The polarity of the drop will be reversed accordingly.
+
+---
 
 <h4 class="section-indicator">Manual reset</h4>
 
@@ -107,11 +117,15 @@ Note that unlike `J2` the incoming supply is on the right side of this jumper bl
 
 Short these pins together to assert reset on `chip 0`. Works in whether or not watchdog is enabled.
 
+---
+
 <h4 class="section-indicator">Operating modes</h4>
 
 ![know-your-volatco](../assets/j5.png)
 
 The manual/external reset always goes to the reset input of the watchdog chip. This jumper selects which signal goes to `chip 0`: The manual/external reset signal, or the output of the watchdog. Normal field production mode, enabling watchdog, is shown as the default. The watchdog should be disabled by moving the jumper to pins 1 and 2, when not running the production code on the chips.
+
+---
 
 <h4 class="section-indicator">No boot</h4>
 
@@ -119,29 +133,45 @@ The manual/external reset always goes to the reset input of the watchdog chip. T
 
 Install this jumper to prevent program booting from the SPI flash. When this is installed, the watchdog must be disabled by connecting pins 1 and 2 of `J5`.
 
+---
+
 <h4 class="section-indicator">Programmer access</h4>
 
 ![know-your-volatco](../assets/j7.png)
 
 This serial port supports an asynchronous serial terminal for polyFORTH running on `chip 0`. Pin 6 must be jumpered or connected to a pin generating watchdog pulses before the watchdog may be enabled.
 
+---
+
 ![know-your-volatco](../assets/j8.png)
 
 This serial port is used to talk to nodes on one or both chips directly using the Interactive Development Environment via node `708` of `chip 0`. Its reset pin is effective in both operating modes. Once the SPI flash has been initialized with boot code, this port is not necessary to run polyFORTH.
+
+---
 
 <h4 class="section-indicator">Signal access</h4>
 
 ![know-your-volatco](../assets/j9.png)
 
+---
+
 ![know-your-volatco](../assets/j10.png)
+
+---
 
 ![know-your-volatco](../assets/j11.png)
 
+---
+
 ![know-your-volatco](../assets/j12.png)
+
+---
 
 ![know-your-volatco](../assets/j13.png)
 
 Be aware that pin 6 `10708.17` is input to a boot node. If pin is being driven high by another device when `chip 1` is reset, node `10708` will delay for a long time during boot which may cause problems with watchdog. If being used as an output and driven high on reset, the RC time constant of load capacitance and weak pull down resistance may be long enough to delay booting. The same is true of `10705.17` if being used as an input and driven low by another device during reset. Note that `10705.17` is pulled up with 5.1kΩ. If this pin is not being used it should be set to high impedance to minimize power consumption.
+
+---
 
 ### Forest Creature Adventures
 
