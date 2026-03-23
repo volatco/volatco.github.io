@@ -6,7 +6,7 @@ Volatco is a low-power asynchronous computing development board for embedded con
 
 By working through this documentation, you can implement and validate:
 
-- Event-driven sensing loops that wake compute only on signal activity.
+- Signal events activate sensor processing.
 - Multi-node message pipelines across exposed chip I/O headers.
 - Deterministic control tasks with bounded-latency response behavior.
 - Serial development and deployment workflows through `J8` and reset control on `J4`.
@@ -269,6 +269,8 @@ Suggested format for each adventure:
 ### Related research
 
 **Agentic AI: Embodied Learning Model**
+
+Agentic AI is a foundational principle of the applicability of self-tuning controllers. Once the machine understand the ways and means of self-tuning constructs, it is an optimized model of the system under control, including analysis of damaged systems by close adaptation.
 
 The ideal research path frames agency through embodied interaction rather than passive observation. In this view, an agent runs experiments, receives results, and updates behavior from those interactions.
 
