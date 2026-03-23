@@ -1,6 +1,6 @@
 Volatco is a low-power asynchronous computing development board for embedded control, robotics, and experimental machine-intelligence workloads, and this page provides a complete technical overview of the platform architecture, performance and power characteristics, expansion and programming interfaces, detailed jumper and pin references, and the adventure game context used for scenario-based exploration.
 
-![i-just-heard-about-volatco](./assets/banner.png)
+![i-just-heard-about-volatco](../assets/banner.png)
 
 ### Programming with Volatco
 
@@ -68,7 +68,7 @@ The information below pertains to the technical details of a Volatco.
 
 All connections are made on the top of the PCB for Volatco model 'a'. The model 'b' dialect has pins out both the top and bottom of the board.
 
-![know-your-volatco](./assets/know-your-volatco.jpg)
+![know-your-volatco](../assets/know-your-volatco.jpg)
 
 <h4 class="section-indicator">Option Jumpers</h4>
 
@@ -83,163 +83,109 @@ All connections are made on the top of the PCB for Volatco model 'a'. The model 
 *	`J7` is for polyFORTH terminal input - including watchdog signal, normally supplied from on the board. Both `J7` and `J8` carry both ground and `V1P8` for devices such as FTDI chips that can accept our supply to power their I/O pins.
 *	`J9` and `J10` are signals from chip 0 plus two pins from chip 1. `J11`, `J12`, and `J13` all carry signals from `chip 1`. Each of these 12-pin headers carries 9 signals and 3 grounds, for a total of 45 signals. See following table for the pinout description.
 
+---
+
+<h4 class="section-indicator">Components</h4>
+
+![know-your-volatco](../assets/main-components.png)
+
+---
+
 <h4 class="section-indicator">Power control</h4>
 
-**J1 - External 1V8 input**
+![know-your-volatco](../assets/j1.png)
 
-|                      |   | J1 |   |      |
-|:--------------------:|:-:|:--:|:-:|:----:|
-|         GND          | 1 |    | 2 | V1P8 |
-|         GND          | 3 |    | 4 | V1P8 |
+Note that the ground pins are those nearest the PCB edge. Also, pin 4 will depend on what is provided from the stacked module boards above or below.
 
-Note that the ground pins are those nearest the PCB edge.
+---
 
-**J2 - Chip 0 (Host) shunts**
-
-|                      |   | J2 |   |              |
-|:--------------------:|:-:|:--:|:-:|:------------:|
-|         V1P8         | 1 |    | 2 | VC0-computer |
-|         V1P8         | 3 |    | 4 |  VC0-I/O     |
+![know-your-volatco](../assets/j2.png)
 
 Jumpers are shown for normal operation. Substitute a shunt resistor to measure voltage drop across the resistor and calculate current. Be sure to use a small enough value that the expected current will not cause a voltage drop setting the supply below specs for the chip (typically 1.62V).
 
-**J3 - Chip 1 (Target) shunts**
+---
 
-|                            |   | J3 |   |      |
-|:--------------------------:|:-:|:--:|:-:|:----:|
-|        VC1-Computer        | 1 |    | 2 | V1P8 |
-|         VC1-I/O            | 3 |    | 4 | V1P8 |
+![know-your-volatco](../assets/j3.png)
 
 Note that unlike `J2` the incoming supply is on the right side of this jumper block. The polarity of the drop will be reversed accordingly.
 
+---
+
 <h4 class="section-indicator">Manual reset</h4>
 
-**J4 - Manual reset**
-
-| Pin | Signal |
-|:---:|:------:|
-|  1  | Manual reset |
-|  2  | GND |
+![know-your-volatco](../assets/j4.png)
 
 Short these pins together to assert reset on `chip 0`. Works in whether or not watchdog is enabled.
 
+---
+
 <h4 class="section-indicator">Operating modes</h4>
 
-**J5 - Watchdog mode select**
-
-| Pin | Signal |
-|:---:|:-------|
-|  1  | Manual/external |
-|  2  | Host chip RST |
-|  3  | Watchdog chip |
+![know-your-volatco](../assets/j5.png)
 
 The manual/external reset always goes to the reset input of the watchdog chip. This jumper selects which signal goes to `chip 0`: The manual/external reset signal, or the output of the watchdog. Normal field production mode, enabling watchdog, is shown as the default. The watchdog should be disabled by moving the jumper to pins 1 and 2, when not running the production code on the chips.
 
+---
+
 <h4 class="section-indicator">No boot</h4>
 
-**J6 - No boot**
-
-| Pin | Signal |
-|:---:|:-------|
-|  1  | Host 705.17 |
-|  2  | 1k pullup to 1v8 |
+![know-your-volatco](../assets/j6.png)
 
 Install this jumper to prevent program booting from the SPI flash. When this is installed, the watchdog must be disabled by connecting pins 1 and 2 of `J5`.
 
+---
+
 <h4 class="section-indicator">Programmer access</h4>
 
-**J7 - polyForth serial terminal**
+![know-your-volatco](../assets/j7.png)
 
-|                           |   | J7 |   |                   |
-|:-------------------------:|:-:|:--:|:-:|:-----------------:|
-|            GND            | 1 |    | 2 |        V1P8       |
-|      Output from chip     | 3 |    | 4 |   Input to chip   |
-|            GND            | 5 |    | 6 | Input to watchdog |
+This serial port supports an asynchronous serial terminal for polyFORTH running on `chip 0`. Pin 6 must be jumpered or connected to a pin generating watchdog pulses before the watchdog may be enabled.
 
-This serial port supports an asynchronous serial terminal for polyFORTH running on `chip 0`. Pin 6 must be jumpered or wire wrapped to a pin generating watchdog pulses before the watchdog may be enabled.
+---
 
-**J8 - IDE serial**
-
-|                     |   | J8 |   |               |
-|:-------------------:|:-:|:--:|:-:|:-------------:|
-|         GND         | 1 |    | 2 |      V1P8     |
-|   Output from chip  | 3 |    | 4 | Input to chip |
-|         GND         | 5 |    | 6 |     RESET     |
+![know-your-volatco](../assets/j8.png)
 
 This serial port is used to talk to nodes on one or both chips directly using the Interactive Development Environment via node `708` of `chip 0`. Its reset pin is effective in both operating modes. Once the SPI flash has been initialized with boot code, this port is not necessary to run polyFORTH.
 
+---
+
 <h4 class="section-indicator">Signal access</h4>
 
-**J9 - Chip 0 (part 1)**
+![know-your-volatco](../assets/j9.png)
 
-|               |    | J9 |    |        |
-|:-------------:|:--:|:--:|:--:|:------:|
-|      GND      |  1 |    |  2 | 117.ai |
-|     117.a0    |  3 |    |  4 | 217.17 |
-|      GND      |  5 |    |  6 | 317.17 |
-|     617.ao    |  7 |    |  8 | 617.ai |
-|      GND      |  9 |    | 10 | 517.17 |
-|     417.17    | 11 |    | 12 | 717.ai |
+---
 
-**J10 - Chip 0 (part 2) and two pins for chip 1**
+![know-your-volatco](../assets/j10.png)
 
-|                                       |    | J10 |    |          |
-|:-------------------------------------:|:--:|:---:|:--:|:--------:|
-|                  GND                  |  1 |     |  2 |  717.ao  |
-|                 715.17                |  3 |     |  4 |  713.ao  |
-|                  GND                  |  5 |     |  6 |  713.ai  |
-|                 709.ai                |  7 |     |  8 |  709.ao  |
-|                  GND                  |  9 |     | 10 |  600.17  |
-|                10100.17               | 11 |     | 12 | 10200.17 |
+---
 
-**J11 - Chip 1 (part 1)**
+![know-your-volatco](../assets/j11.png)
 
-|               |    | J11 |    |          |
-|:-------------:|:--:|:---:|:--:|:--------:|
-|      GND      |  1 |     |  2 | 10600.17 |
-|    10500.17   |  3 |     |  4 | 10008.17 |
-|      GND      |  5 |     |  6 |  10008.5 |
-|    10008.3    |  7 |     |  8 |  10008.1 |
-|      GND      |  9 |     | 10 | 10117.ai |
-|    10117.ao   | 11 |     | 12 | 10217.17 |
+---
 
-**J12 - Chip 1 (part 2)**
+![know-your-volatco](../assets/j12.png)
 
-|               |    | J12 |    |          |
-|:-------------:|:--:|:---:|:--:|:--------:|
-|      GND      |  1 |     |  2 | 10317.17 |
-|    10517.17   |  3 |     |  4 | 10417.17 |
-|      GND      |  5 |     |  6 | 10617.ai |
-|    10717.ai   |  7 |     |  8 | 10617.ao |
-|      GND      |  9 |     | 10 | 10717.ao |
-|    10113.ao   | 11 |     | 12 | 10715.17 |
+---
 
-**J13 - Chip 1 (part 3)**
+![know-your-volatco](../assets/j13.png)
 
-|               |    | J13 |    |                         |
-|:-------------:|:--:|:---:|:--:|:-----------------------:|
-|      GND      |  1 |     |  2 |         10713.ai        |
-|    10709.ao   |  3 |     |  4 |         10709.ai        |
-|      GND      |  5 |     |  6 | 10708.17 - Boot receive |
-|    10705.1    |  7 |     |  8 |         10708.1         |
-|      GND      |  9 |     | 10 |         10705.3         |
-|    10705.5    | 11 |     | 12 |   10715.17 - Pulled-up  |
+Be aware that pin 6 `10708.17` is input to a boot node. If pin is being driven high by another device when `chip 1` is reset, node `10708` will delay for a long time during boot which may cause problems with watchdog. If being used as an output and driven high on reset, the RC time constant of load capacitance and weak pull down resistance may be long enough to delay booting. The same is true of `10705.17` if being used as an input and driven low by another device during reset. Note that `10705.17` is pulled up with 5.1kΩ. If this pin is not being used it should be set to high impedance to minimize power consumption.
 
-Be aware that pin 9 `10708.17` is input to a boot node. If pin is being driven high by another device when `chip 1` is reset, node `10708` will delay for a long time during boot which may cause problems with watchdog. If being used as an output and driven high on reset, the RC time constant of load capacitance and weak pull down resistance may be long enough to delay booting. The same is true of `10705.17` if being used as an input and driven low by another device during reset.
+---
 
 ### Forest Creature Adventures
 
 <div class="artwork-panel" role="group" aria-label="Volatco adventure artwork">
   <figure class="artwork-panel__item">
-    <img src="./assets/jezek-144-vms.jpg" alt="With 144-nodes">
+    <img src="../assets/jezek-144-vms.jpg" alt="With 144-nodes">
     <figcaption>Jezek</figcaption>
   </figure>
   <figure class="artwork-panel__item artwork-panel__item--center">
-    <img src="./assets/wolny-sustainable.jpg" alt="Forest friendly">
+    <img src="../assets/wolny-sustainable.jpg" alt="Forest friendly">
     <figcaption>Wolny</figcaption>
   </figure>
   <figure class="artwork-panel__item">
-    <img src="./assets/viver-solve-any-problem.jpg" alt="To solve anything possible">
+    <img src="../assets/viver-solve-any-problem.jpg" alt="To solve anything possible">
     <figcaption>Viver</figcaption>
   </figure>
 </div>
@@ -247,18 +193,18 @@ Be aware that pin 9 `10708.17` is input to a boot node. If pin is being driven h
 The forest creatures are used as scenario guides for learning board behavior, power discipline, and asynchronous control patterns.
 
 <figure class="artwork-panel__item artwork-panel__item--center artwork-panel__item--intro">
-  <img src="./assets/programming-volatco-fun.jpg" alt="Programming with Volatco can be playful and hands-on">
+  <img src="../assets/programming-volatco-fun.jpg" alt="Programming with Volatco can be playful and hands-on">
   <figcaption>Programming with Volatco is hands-on: Test ideas, explore signals, and turn experiments into adventures.</figcaption>
 </figure>
 
 | Adventure | Objective | Hardware focus | Expected outcome | Artwork |
 | --- | --- | --- | --- | --- |
-| Jezek and the Quiet Trail | Build a low-duty-cycle sensing loop that only wakes compute on events. | Wake/sleep transitions, watchdog-safe loops | Stable event logging with low idle draw. | ![Jezek and the Quiet Trail artwork](./assets/jezek-quiet-trail.jpg) |
-| Viver and the Signal Bridge | Forward sensor data between two nodes with bounded latency. | Inter-node messaging, pin routing | Repeatable packet transfer with measured timing. | ![Viver and the Signal Bridge artwork](./assets/viver-signal-bridge.jpg) |
-| Owl at J8 | Configure a robust serial debug session and reset workflow. | `J8` IDE serial, manual reset via `J4` | Reliable flash/load/debug cycle during development. | ![Owl at J8 artwork](./assets/owl-at-J8.jpg) |
-| Fox in the Rain | Validate graceful behavior under noisy or intermittent inputs. | Input filtering, timeout handling | No lockups during bursty/noisy signal tests. | ![Fox in the Rain artwork](./assets/fox-in-the-rain.jpg) |
-| Hedgehog Night Watch | Run long-duration watchdog validation with periodic health beacons. | `J5` mode selection, watchdog pulse source on `J7` | Automatic recovery from forced hangs. | ![Hedgehog Night Watch artwork](./assets/hedgehog-night-watch.jpg) |
-| Badger Power Audit | Profile power across idle, active, and burst workloads. | Shunt measurement on `J2`/`J3`, workload scheduling | Baseline power table for reproducible experiments. | ![Badger Power Audit artwork](./assets/badger-power-audit.jpg) |
+| Jezek and the Quiet Trail | Build a low-duty-cycle sensing loop that only wakes compute on events. | Wake/sleep transitions, watchdog-safe loops | Stable event logging with low idle draw. | ![Jezek and the Quiet Trail artwork](../assets/jezek-quiet-trail.jpg) |
+| Viver and the Signal Bridge | Forward sensor data between two nodes with bounded latency. | Inter-node messaging, pin routing | Repeatable packet transfer with measured timing. | ![Viver and the Signal Bridge artwork](../assets/viver-signal-bridge.jpg) |
+| Owl at J8 | Configure a robust serial debug session and reset workflow. | `J8` IDE serial, manual reset via `J4` | Reliable flash/load/debug cycle during development. | ![Owl at J8 artwork](../assets/owl-at-J8.jpg) |
+| Fox in the Rain | Validate graceful behavior under noisy or intermittent inputs. | Input filtering, timeout handling | No lockups during bursty/noisy signal tests. | ![Fox in the Rain artwork](../assets/fox-in-the-rain.jpg) |
+| Hedgehog Night Watch | Run long-duration watchdog validation with periodic health beacons. | `J5` mode selection, watchdog pulse source on `J7` | Automatic recovery from forced hangs. | ![Hedgehog Night Watch artwork](../assets/hedgehog-night-watch.jpg) |
+| Badger Power Audit | Profile power across idle, active, and burst workloads. | Shunt measurement on `J2`/`J3`, workload scheduling | Baseline power table for reproducible experiments. | ![Badger Power Audit artwork](../assets/badger-power-audit.jpg) |
 
 Suggested format for each adventure:
 1. Define the signal path and pin map.
