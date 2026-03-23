@@ -30,7 +30,7 @@ The platform includes **two GA144A12 mesh-processor chips**, **2 MB SRAM**, **16
 
 ### System summary
 
-- 144 independent F18A cores.
+- 144 independent F18A computers.
 - Up to 96B ops/s.
 - ~13 uW idle to ~972 mW peak (~650 mW typical upper draw).
 - One-gate start/stop latency (~100 ps).
@@ -40,20 +40,20 @@ The platform includes **two GA144A12 mesh-processor chips**, **2 MB SRAM**, **16
 ### Technical snapshot
 
 - Architecture: ISLP GA144-based.
-- Cores: 144 x 18-bit F18A processing nodes.
+- Computers: 144 x 18-bit F18A processing nodes.
 - Peak compute: up to 96 billion ops/s.
 - Power per F18A: 90 nW idle leakage to 6.8 mW active.
 - Power range per chip: 13 uW to 972 mW.
 - Start and stop: one-gate delay (100 ps).
 - Per-instruction energy: ~7 pJ.
 
-The design supports deterministic low-latency behavior, with cores able to transition between active and inactive states in one gate delay.
+The design supports deterministic low-latency behavior, with computers able to transition between active and inactive states in one gate delay.
 
 **Key Features**
 
 | **Feature** | **Benefit** |
 | --- | --- |
-| **ISLP with dual GA144 (144 × 2 = 288 cores)** | Run 288 concurrent threads that are ideal for parallel algorithms, machine-intelligence, and evolutionary computing. |
+| **ISLP with dual GA144 (144 × 2 = 288 computers)** | Run 288 concurrent threads that are ideal for parallel algorithms, machine-intelligence, and evolutionary computing. |
 | **polyForth® Runtime** | A lightweight, stack‑based language that lets you prototype, debug, and iterate on AI kernels in minutes-no heavyweight SDKs required. |
 | **2 MB SRAM + 16 MB SPI Flash** | Fast volatile memory for model parameters and large non‑volatile storage for firmware, datasets, and compiled Forth programs. |
 | **Zero On‑Board Regulation** | Power is supplied externally, eliminating regulator quiescent draw and shrinking the PCB. Choose the most efficient supply for your experiment. |
@@ -96,19 +96,19 @@ Note that the ground pins are those nearest the PCB edge.
 
 **J2 - Chip 0 (Host) shunts**
 
-|                      |   | J2 |   |          |
-|:--------------------:|:-:|:--:|:-:|:--------:|
-|         V1P8         | 1 |    | 2 | VC0-Core |
-|         V1P8         | 3 |    | 4 |  VC0-I/O |
+|                      |   | J2 |   |              |
+|:--------------------:|:-:|:--:|:-:|:------------:|
+|         V1P8         | 1 |    | 2 | VC0-computer |
+|         V1P8         | 3 |    | 4 |  VC0-I/O     |
 
 Jumpers are shown for normal operation. Substitute a shunt resistor to measure voltage drop across the resistor and calculate current. Be sure to use a small enough value that the expected current will not cause a voltage drop setting the supply below specs for the chip (typically 1.62V).
 
 **J3 - Chip 1 (Target) shunts**
 
-|                        |   | J3 |   |      |
-|:----------------------:|:-:|:--:|:-:|:----:|
-|        VC1-Core        | 1 |    | 2 | V1P8 |
-|         VC1-I/O        | 3 |    | 4 | V1P8 |
+|                            |   | J3 |   |      |
+|:--------------------------:|:-:|:--:|:-:|:----:|
+|        VC1-Computer        | 1 |    | 2 | V1P8 |
+|         VC1-I/O            | 3 |    | 4 | V1P8 |
 
 Note that unlike `J2` the incoming supply is on the right side of this jumper block. The polarity of the drop will be reversed accordingly.
 
