@@ -22,7 +22,7 @@ Volatco is a compact multicomputer and multiprogrammer platform (6 cm x 4 cm x 1
 
 A board intended for **embodied AI, neuromorphic experimentation, and ultra-low-energy inference** workloads, with a massively parallel architecture and off-board expansion support.
 
-The platform includes **two GA144A12 mesh-processor chips**, **2 MB SRAM**, **16 MB SPI flash**, and exposed I/O via header pins.
+The platform includes **two GA144A12 mesh-processor chips**, **2 MB SRAM**, **32 MB SPI flash**, and exposed I/O via header pins.
 
 **Supported plug-in modules:** Power and USB-connectivity, Ethernet, BLE, and external system interface.
 
@@ -49,13 +49,26 @@ The platform includes **two GA144A12 mesh-processor chips**, **2 MB SRAM**, **16
 
 The design supports deterministic low-latency behavior, with computers able to transition between active and inactive states in one gate delay.
 
+### Expansion capabilities
+
+Pluggable-stack arrangement of Volatco and its modules.
+
+- VOL00 - Volatco
+- VOL01 - Power/USB module.
+- VOL02 - Ethernet module.
+- VOL03 - BLE module.
+- VOL04 - External module
+- VOL05 - Multimedia module.
+- VOL06 - Robotic interface.
+- VOLxx - Prototyping board.
+
 **Key Features**
 
 | **Feature** | **Benefit** |
 | --- | --- |
 | **ISLP with dual GA144 (144 × 2 = 288 computers)** | Run 288 concurrent threads that are ideal for parallel algorithms, machine-intelligence, and evolutionary computing. |
 | **polyForth® Runtime** | A lightweight, stack‑based language that lets you prototype, debug, and iterate on AI kernels in minutes-no heavyweight SDKs required. |
-| **2 MB SRAM + 16 MB SPI Flash** | Fast volatile memory for model parameters and large non‑volatile storage for firmware, datasets, and compiled Forth programs. |
+| **2 MB SRAM + 32 MB SPI flash** | Fast volatile memory for model parameters and large non‑volatile storage for firmware, datasets, and compiled Forth programs. |
 | **Zero On‑Board Regulation** | Power is supplied externally, eliminating regulator quiescent draw and shrinking the PCB. Choose the most efficient supply for your experiment. |
 | **Rich Off‑Board I/O** | All GPIO, analogue‑in/out, and power pins are exposed on a standard breadboard‑compatible header. Plug in sensors, actuators, or custom expansion boards without soldering. |
 | **Watchdog & Reset Circuitry** | Automatic recovery from software hangs, essential for long‑running experiments. |
