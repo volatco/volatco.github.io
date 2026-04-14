@@ -236,3 +236,5 @@ The ideal research path frames agency through embodied interaction rather than p
 The foundational module describes a cycle of anticipation, result comparison, and intrinsic states (for example frustrated, self-satisfied, and bored) that drive experiment switching and developmental learning over time.
 
 Source pathway and branches: [github.com/cartheur/ideal](https://github.com/cartheur/ideal)
+
+Last updated: 14 April 2026.
