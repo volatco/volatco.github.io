@@ -79,7 +79,7 @@ The information below pertains to the technical details of a Volatco.
 
 ### The Volatco pin-set
 
-All connections are made on the top of the PCB for Volatco model 'a'. The model 'b' and 'c' dialects have receptacles in the -z direction and pins in the +z direction respective to the board.
+Connection-pins are from the top of Volatco model 'a'. Model 'b' and 'c' dialects have receptacles in the -z direction and pins in the +z direction respective to the board.
 
 ![know-your-volatco](../assets/know-your-volatco.jpg)
 
