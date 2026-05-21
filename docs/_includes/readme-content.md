@@ -57,9 +57,9 @@ Pluggable-stack arrangement of Volatco and its modules.
 - VOL01 - Power/USB module.
 - VOL02 - Ethernet module.
 - VOL03 - BLE module.
-- VOL04 - External module
+- VOL04 - External module.
 - VOL05 - Multimedia module.
-- VOL06 - Robotic interface.
+- VOL06 - Correlative sensor-fusion module.
 - VOLxx - Prototyping board.
 
 **Key Features**
