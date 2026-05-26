@@ -60,6 +60,7 @@ Pluggable-stack arrangement of Volatco and its modules.
 - VOL04 - External module.
 - VOL05 - Multimedia module.
 - VOL06 - Correlative sensor-fusion module.
+- VOL07 - FeRAM module.
 - VOLxx - Prototyping board.
 
 **Key Features**
