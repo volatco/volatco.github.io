@@ -122,7 +122,7 @@ Connection-pins are from the top of Volatco model 'a'. Model 'b' and 'c' dialect
 
 ![know-your-volatco](../assets/j1.png)
 
-Note that the ground pins are those nearest the PCB edge. Also, pin 4 will depend on what is provided from the stacked module boards above or below.
+Note that the ground pins are those nearest the PCB edge. Also, pin 3 and 4 will depend on what is provided from the stacked module boards above or below. In the image, 3.3V and 5.0V are examples of what can be provided by the connected module.
 
 ---
 
