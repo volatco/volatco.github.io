@@ -17,9 +17,10 @@ Make an LED blink from a Volatco GPIO signal.
 - A breadboard or another safe way to connect the LED
 - A serial or IDE connection to the board
 
-![Mini-red LED used in this tutorial](../assets/led-3mm-red-diffused.jpg)
-
-In most through-hole LEDs like this one, the longer lead is the anode and the shorter lead is the cathode.
+<figure>
+  <img src="../assets/led-3mm-red-diffused.jpg" alt="Mini-red LED used in this tutorial" style="width: 100%; max-width: 220px; height: auto;">
+  <figcaption>In most through-hole LEDs like this one, the longer lead is the anode and the shorter lead is the cathode.</figcaption>
+</figure>
 
 ## Parts Note
 
@@ -206,6 +207,9 @@ For background on interactive Forth programming, Leo Brodie's *Starting Forth* i
   </video>
   <figcaption>Volatco GPIO blinking a mini-red LED during the tutorial test.</figcaption>
 </figure>
+
+If the embedded player does not work in your browser, open or download the video directly here:
+[volatco-gpio.mp4](../assets/volatco-gpio.mp4)
 
 ## Troubleshooting
 
