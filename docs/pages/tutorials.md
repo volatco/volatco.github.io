@@ -149,7 +149,7 @@ R 500.
 - Load the program again with `1585 LOAD`.
 - Watch the LED and confirm that the blink period changed.
 
-If you do not use `FLUSH`, the edited value is usually not written to mass storage, so you can experiment without permanently changing the stored block. You can also type `Q` while viewing the block shadow for the short note that describes what the demo is doing.
+If you do not use `FLUSH`, the edited value is not written to mass storage; therefore, the experiment is not expressly saved to memory. You can also type `Q` while viewing the block shadow for the short note that describes what the code is doing.
 
 ## Further Reading
 
