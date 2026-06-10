@@ -183,8 +183,8 @@ You can also type `Q` while viewing the block shadow for the short note that des
 
 For background on interactive Forth programming, Leo Brodie's *Starting Forth* is still the standard beginner text.
 
-- From FORTH, Inc.: https://www.forth.com/starting-forth/
-- PDF from FORTH, Inc.: https://www.forth.com/wp-content/uploads/2018/01/Starting-FORTH.pdf
+- [Read *Starting Forth* online](https://www.forth.com/starting-forth/)
+- [Download the *Starting Forth* PDF](https://www.forth.com/wp-content/uploads/2018/01/Starting-FORTH.pdf)
 
 ## What Success Looks Like
 
