@@ -20,13 +20,10 @@ Volatco is a compact multicomputer and multiprogrammer platform (6 cm x 4 cm x 1
 
 **System description**
 
-A board intended for **embodied AI, neuromorphic experimentation, and ultra-low-energy inference** workloads, with a massively parallel architecture and off-board expansion support.
-
-The platform includes **two GA144A12 mesh-processor chips**, **2 MB SRAM**, **32 MB SPI flash**, and exposed I/O via header pins.
-
-**Supported plug-in modules:** Power and USB-connectivity, Ethernet, BLE, and external system interface.
-
-**polyForth:** On-board lightweight dual-stack operating system and programming environment.
+- A board intended for **embodied AI, neuromorphic experimentation, and ultra-low-energy inference** workloads, with a massively parallel architecture and off-board expansion support.
+- The platform includes **two GA144A12 mesh-processor chips**, **2 MB SRAM**, **32 MB SPI flash**, and exposed I/O via header pins.
+- **Supported plug-in modules:** Power and USB-connectivity, Ethernet, BLE, and external system interface.
+- **polyForth:** On-board lightweight dual-stack operating system and programming environment.
 
 ### System summary
 
