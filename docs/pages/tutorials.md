@@ -76,9 +76,9 @@ Use documented GPIO `715.17`.
 
 If you prefer to sink current instead of source it, reverse the LED-resistor order and adjust your program logic accordingly. `715.17` is a general-purpose GPIO shared with nearby analog nodes, so keep tests simple and avoid attaching additional circuitry to that signal at the same time.
 
-## LED Demo Code
+## Program Code
 
-LED demo block:
+LED blink in polyForth:
 
 ```text
 1585
