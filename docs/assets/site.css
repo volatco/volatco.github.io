@@ -225,6 +225,30 @@ body {
   overflow-x: auto;
 }
 
+.content figure {
+  margin: 1.25rem 0 1.7rem;
+}
+
+.content figure img,
+.content figure video,
+.content figure iframe {
+  display: block;
+}
+
+.content figcaption {
+  margin-top: 0.6rem;
+}
+
+.content figure + h2,
+.content figure + h3,
+.content figure + p,
+.content video + h2,
+.content video + h3,
+.content iframe + h2,
+.content iframe + h3 {
+  margin-top: 1.6rem;
+}
+
 .artwork-panel {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
