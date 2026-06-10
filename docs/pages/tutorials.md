@@ -201,15 +201,17 @@ For background on interactive Forth programming, Leo Brodie's *Starting Forth* i
 ## Demo Video
 
 <figure>
-  <video controls preload="metadata" style="width: 100%; max-width: 640px; height: auto;">
-    <source src="../assets/volatco-gpio.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <iframe
+    src="https://rumble.com/embed/v7b2zli/"
+    title="LED demo on Volatco"
+    style="width: 100%; max-width: 640px; aspect-ratio: 16 / 9; border: 0;"
+    allowfullscreen
+  ></iframe>
   <figcaption>Volatco GPIO blinking a mini-red LED during the tutorial test.</figcaption>
 </figure>
 
-If the embedded player does not work in your browser, open or download the video directly here:
-[volatco-gpio.mp4](../assets/volatco-gpio.mp4)
+If the embedded player does not work in your browser, open the video directly on Rumble:
+[LED demo on Volatco](https://rumble.com/v7b2zli-led-demo-on-volatco.html)
 
 ## Troubleshooting
 
