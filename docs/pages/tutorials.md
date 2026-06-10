@@ -67,7 +67,7 @@ Then continue:
 
 If block `1585` already exists, its `run` definition uses `2000` as the milliseconds per half cycle of the square wave. Edit that value if you want a different blink rate.
 
-If block `1585` does not already exist on your system, type the LED demo code into the terminal manually, in the interactive Forth style described in Leo Brodie's *Starting Forth*, then save or run it before continuing.
+If block `1585` does not already exist on your system, type the LED demo code into the terminal manually, then save or run it before continuing.
 
 If you make a mistake while editing, reset the Volatco, repeat the startup sequence, inspect block `1585`, and fix what you changed. If you do not use `FLUSH`, your edits are usually not written to mass storage.
 
@@ -165,13 +165,27 @@ The value `2000.` is the delay in milliseconds for each half cycle of the square
 
 Example:
 
-- Change `2000.` to `500.` for a faster blink.
+- Find `2000.` and replace it with `500.` for a faster blink.
+- One way to do that in the editor is:
+
+```text
+F 2000.
+R 500.
+```
+
 - Load the program again with `1585 LOAD`.
 - Watch the LED and confirm that the blink period changed.
 
 If you do not use `FLUSH`, the edited value is usually not written to mass storage, so you can experiment without permanently changing the stored block.
 
 You can also type `Q` while viewing the block shadow for the short note that describes what the demo is doing.
+
+## Further Reading
+
+For background on interactive Forth programming, Leo Brodie's *Starting Forth* is still the standard beginner text.
+
+- From FORTH, Inc.: https://www.forth.com/starting-forth/
+- PDF from FORTH, Inc.: https://www.forth.com/wp-content/uploads/2018/01/Starting-FORTH.pdf
 
 ## What Success Looks Like
 
