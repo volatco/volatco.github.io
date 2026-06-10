@@ -202,7 +202,7 @@ For background on interactive Forth programming, Leo Brodie's *Starting Forth* i
 
 <figure>
   <iframe
-    src="https://rumble.com/embed/v7b2zli/"
+    src="https://rumble.com/embed/v7b2zli-led-demo-on-volatco.html"
     title="LED demo on Volatco"
     style="width: 100%; max-width: 640px; aspect-ratio: 16 / 9; border: 0;"
     allowfullscreen
