@@ -36,9 +36,9 @@ Alternatives:
 
 - Set `J5` to development mode by connecting pins 1 and 2.
 - Use `J4` for manual reset when needed.
-- Use the `VOL01` USB/Power module connected to `VOL00` in the same stacked arrangement shown in the main-page system photo.
-- Connect both USB-C connectors through a USB hub.
-- If you want to prevent SPI flash from auto-booting while experimenting, install `J6` and keep `J5` in development mode.
+- Use the `VOL01` USB/Power module connected to `VOL00` in the same stacked arrangement shown on the main page.
+- Connect both USB-C connectors through a USB hub, so you can access the board via either the IDE `A` or polyForth `B`.
+- If you want to prevent SPI flash from auto-booting while experimenting, install `J6` jumper and set `J5` jumpers to development mode.
 
 ## Prepare the Volatco
 
@@ -102,7 +102,7 @@ LED demo block:
 15  ok
 ```
 
-If block `1585` is already present, use `1585 LIST` to confirm it matches this program. If it is not present, type this code into the terminal, then save or run it before continuing by using `FLUSH!`.
+If block `1585` is already present, use `1585 LIST` to confirm it matches this program. If it is not present, type this code into the terminal, then save or run it before continuing by using `FLUSH`.
 
 ## Example Workflow
 
@@ -157,10 +157,10 @@ If you do not use `FLUSH`, the edited value is usually not written to mass stora
 
 For background on interactive Forth programming, Leo Brodie's *Starting Forth* is still the standard beginner text.
 
-- [Read *Starting Forth* online](https://www.forth.com/starting-forth/)
+- [Read *Starting Forth* online](https://www.forth.com/starting-forth/) at Forth, Inc.
 - [Download the *Starting Forth* PDF](https://www.forth.com/wp-content/uploads/2018/01/Starting-FORTH.pdf)
 
-## What Success Looks Like
+## A Successful Validation
 
 - The LED blink code is available either in block `1585` or as code entered manually at the terminal.
 - `arrayForth 3 VOLATCO`, serial services, and arrayForth are all loaded successfully.
@@ -196,11 +196,10 @@ If the LED does not blink:
 - Confirm the board is in development mode while testing.
 - Confirm the `arrayForth 3 VOLATCO` program was started.
 - Confirm `HOST LOAD TALK` was run.
-- Confirm `SERIAL LOAD` and `PLUG` were run.
+- Confirm `SERIAL LOAD PLUG` weas run.
 - Reset the Volatco and press the space bar again to autobaud.
 - Confirm `AFORTH` was run before using block `1585`.
-- If block `1585` exists, run `1585 LOAD` again.
-- If block `1585` does not exist, verify the LED demo code was typed correctly at the terminal and then saved or run.
+- If block `1585` exists by `1585 LIST`, run `1585 LOAD` again.
+- If block `1585` does not exist, verify the LED demo code was typed correctly and saved using `FLUSH`.
 - Verify the blink interval in `run`.
 - Reset with `J4` and reload the program.
-- The mini-red `2.0 V` LED on a `550 ohm` resistor may not receive enough current from a direct `1.8 V` GPIO output even when the pin is toggling correctly.
