@@ -24,7 +24,7 @@ Make an LED blink from a Volatco GPIO signal at a periodic rate.
 
 This tutorial uses a `550 ohm` resistor and a mini-red LED with `Vp = 2.0 V`.
 
-Volatco GPIO behavior is documented around a `1.8 V` supply. A `2.0 V` LED may not leave enough headroom for useful current to flow when driven directly from a GPIO pin. If the LED does not blink even though your program is running, the likely cause may be insufficient LED current.
+Volatco GPIO behavior is set to `1.8 V` level. A `2.0 V` LED, the minature one for our demo, is recommended as other LEDs have not been tested. If the LED does not blink even though your program is running, the likely cause is the LED `Vp` is too great leading to insufficient current a the lead.
 
 Alternatives:
 
@@ -64,11 +64,7 @@ Then continue:
 2. Type `AFORTH` and wait for the variables to be defined.
 3. Type `1585 LIST` to inspect the LED demo block.
 
-If block `1585` already exists, its `run` definition uses `2000` as the milliseconds per half cycle of the square wave. Edit that value if you want a different blink rate.
-
-If block `1585` does not already exist on your system, type the LED demo code into the terminal manually, then save or run it before continuing.
-
-If you make a mistake while editing, reset the Volatco, repeat the startup sequence, inspect block `1585`, and fix what you changed. If you do not use `FLUSH`, your edits are usually not written to mass storage.
+If block `1585` already exists, its `run` definition uses `2000` as the milliseconds per half cycle of the square wave. Edit that value if you want a different blink rate. If block `1585` does not already exist on your system, type the LED demo code into the terminal manually, then save or run it before continuing. If you make a mistake while editing, reset the Volatco, repeat the startup sequence, inspect block `1585`, and fix what you changed. If you do not use `FLUSH`, your edits are usually not written to mass storage.
 
 ## Wiring the LED
 
@@ -80,25 +76,7 @@ Use documented GPIO `715.17`.
 4. Connect the LED cathode to one of the ground pins immediately adjacent to `715.17` on `J10`.
 5. Place the LED and resistor on the breadboard in the same arrangement shown in the demo video.
 
-If you prefer to sink current instead of source it, reverse the LED-resistor order and adjust your program logic accordingly.
-
-With the `550 ohm` resistor and mini-red `2.0 V` LED, direct GPIO drive may not provide enough current from a `1.8 V` GPIO swing.
-
-`715.17` is documented as a general-purpose `GPIO` signal. It is also noted as a pin shared with nearby analog nodes, so keep this test simple and avoid attaching additional circuitry to that signal at the same time.
-
-## Suggested First Test
-
-Use the existing LED blink program in polyForth block `1585` if it is present on your system.
-
-If it is not present, enter the LED blink code manually at the terminal, then save or run it and continue.
-
-The program does three things:
-
-1. Configure `715.17` as an output.
-2. Drive it high, wait a short time, then drive it low.
-3. Repeat forever.
-
-In this example, the blink interval is `2000` milliseconds per switch-state change.
+If you prefer to sink current instead of source it, reverse the LED-resistor order and adjust your program logic accordingly. `715.17` is a general-purpose `GPIO` signal. It is also a pin shared with nearby analog nodes, so keep this test simple and avoid attaching additional circuitry to that signal at the same time.
 
 ## LED Demo Code
 
@@ -146,9 +124,7 @@ If block `1585` is present, start the program from arrayForth with:
 1585 LOAD
 ```
 
-This loads the code in block `1585` and starts it running.
-
-Each time you enter `1585 LOAD`, node `715` is reprogrammed so you can edit `run` and load again.
+This loads the code in block `1585` and starts it running. Each time you enter `1585 LOAD`, node `715` is reprogrammed so you can edit `run` and load again.
 
 ## Change the Blink Rate
 
@@ -175,9 +151,7 @@ R 500.
 - Load the program again with `1585 LOAD`.
 - Watch the LED and confirm that the blink period changed.
 
-If you do not use `FLUSH`, the edited value is usually not written to mass storage, so you can experiment without permanently changing the stored block.
-
-You can also type `Q` while viewing the block shadow for the short note that describes what the demo is doing.
+If you do not use `FLUSH`, the edited value is usually not written to mass storage, so you can experiment without permanently changing the stored block. You can also type `Q` while viewing the block shadow for the short note that describes what the demo is doing.
 
 ## Further Reading
 
