@@ -54,7 +54,7 @@ A comprehensive array of compute and interfaces as a pluggable-stack arrangement
 - VOL01 - USB/Power module.
 - VOL02 - Ethernet module.
 - VOL03 - Ad hoc radio module.
-- VOL04 - Power-control module.
+- VOL04 - External device module.
 - VOL05 - Multimedia module.
 - VOL06 - Correlative sensor-fusion module.
 - VOL07 - FeRAM expansion module.
