@@ -53,7 +53,7 @@ A comprehensive array of compute and interfaces as a pluggable-stack arrangement
 - VOL00 - Volatco multicomputer.
 - VOL01 - USB/Power module.
 - VOL02 - Ethernet module.
-- VOL03 - BLE module.
+- VOL03 - Ad hoc module.
 - VOL04 - Power-control module.
 - VOL05 - Multimedia module.
 - VOL06 - Correlative sensor-fusion module.
